@@ -170,18 +170,6 @@ p {
 
 
 
-
-@keyframes bg-animation {
-  0% {
-    background-position: 0%;
-  }
-
-  100% {
-    background-position: 100%;
-  }
-}
-
-
 .hero-headline-wrapper {
   display: flex;
   flex: 1;
