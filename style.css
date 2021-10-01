@@ -232,21 +232,21 @@ p {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1.8fr 0.4fr 0.8fr 1fr 1.6fr 0.6fr 1.8fr 0.6fr 0.6fr;
   grid-template-rows: 0.4fr 0.4fr 3fr 0.5fr 0.6fr 0.4fr 2.6fr 1.2fr 1.3fr 1.7fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    ". . . "
-    "world-kitchen world-kitchen . "
-    "world-kitchen world-kitchen . "
-    ". tavolo-lungo tavolo-lungo . "
-    ". tavolo-lungo tavolo-lungo . "
-    ". . . "
-    ". nearby-app nearby-app ."
-    ". . . "
-    ". . . "
-    ". . . ";
+    ". . . . . . . . ."
+    "world-kitchen world-kitchen . . . . . . ."
+    "world-kitchen world-kitchen . . . . . . ."
+    ". . . tavolo-lungo tavolo-lungo . . . ."
+    ". . . tavolo-lungo tavolo-lungo . . . ."
+    ". . . . . . . . ."
+    ". . . . . nearby-app nearby-app . ."
+    ". . . . . . . . ."
+    ". . . . . . . . ."
+    ". . . . . . . . .";
     min-height: 100vh;
 }
 
@@ -267,58 +267,10 @@ html, body , .container {
 @media only screen and (min-width: 992px) {
 
 body {background: hotpink;}
-
-/* Grid Layout */
-
-.container {
-  display: grid;
-  grid-template-columns: 1.8fr 0.4fr 0.8fr 1fr 1.6fr 0.6fr 1.8fr 0.6fr 0.6fr;
-  grid-template-rows: 0.4fr 0.4fr 3fr 0.5fr 0.6fr 0.4fr 2.6fr 1.2fr 1.3fr 1.7fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". . . . . . . . ."
-    "world-kitchen world-kitchen . . . . . . ."
-    "world-kitchen world-kitchen . . . . . . ."
-    ". . . tavolo-lungo tavolo-lungo . . . ."
-    ". . . tavolo-lungo tavolo-lungo . . . ."
-    ". . . . . . . . ."
-    ". . . . . nearby-app nearby-app . ."
-    ". . . . . . . . ."
-    ". . . . . . . . ."
-    ". . . . . . . . .";
-    min-height: 100vh;
 }
-
-
-
-}
-
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   body  {background: orangered;}
-
-  /* Grid Layout */
-
-.container {
-  display: grid;
-  grid-template-columns: 1.8fr 0.4fr 0.8fr 1fr 1.6fr 0.6fr 1.8fr 0.6fr 0.6fr;
-  grid-template-rows: 0.4fr 0.4fr 3fr 0.5fr 0.6fr 0.4fr 2.6fr 1.2fr 1.3fr 1.7fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". . . . . . . . ."
-    "world-kitchen world-kitchen . . . . . . ."
-    "world-kitchen world-kitchen . . . . . . ."
-    ". . . tavolo-lungo tavolo-lungo . . . ."
-    ". . . tavolo-lungo tavolo-lungo . . . ."
-    ". . . . . . . . ."
-    ". . . . . nearby-app nearby-app . ."
-    ". . . . . . . . ."
-    ". . . . . . . . ."
-    ". . . . . . . . .";
-    min-height: 100vh;
 }
 
-}
