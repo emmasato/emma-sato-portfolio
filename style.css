@@ -69,8 +69,6 @@ p {
   margin-bottom: 1em;
 }
 
-
-
 /* Work Page Layout */
 
 
@@ -113,10 +111,6 @@ p {
 
 
 
-
-
-
-
 /* Hero */
 
 .branding-navigation {
@@ -141,7 +135,7 @@ p {
 }
 
 .hero-headline {
-  font-size: 5em;
+  font-size: 2em;
 }
 
 .footer-navigation {
@@ -161,13 +155,6 @@ p {
   background-image: var(--gradient);
   animation: bg-animation 120s infinite alternate;
 }
-
-
-
-
-
-
-
 
 
 .hero-headline-wrapper {
@@ -228,26 +215,26 @@ p {
   height: 30vh;
 }
 
-/* Grid Layout */
+/* Grid Layout Mobile */
 
 .container {
   display: grid;
-  grid-template-columns: 1.8fr 0.4fr 0.8fr 1fr 1.6fr 0.6fr 1.8fr 0.6fr 0.6fr;
-  grid-template-rows: 0.4fr 0.4fr 3fr 0.5fr 0.6fr 0.4fr 2.6fr 1.2fr 1.3fr 1.7fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh ;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    ". . . . . . . . ."
-    "world-kitchen world-kitchen . . . . . . ."
-    "world-kitchen world-kitchen . . . . . . ."
-    ". . . tavolo-lungo tavolo-lungo . . . ."
-    ". . . tavolo-lungo tavolo-lungo . . . ."
-    ". . . . . . . . ."
-    ". . . . . nearby-app nearby-app . ."
-    ". . . . . . . . ."
-    ". . . . . . . . ."
-    ". . . . . . . . .";
-    min-height: 100vh;
+    ". . ."
+    "world-kitchen world-kitchen ."
+    "world-kitchen world-kitchen ."
+    ". tavolo-lungo tavolo-lungo"
+    ". tavolo-lungo tavolo-lungo"
+    ". . ."
+    ". nearby-app nearby-app"
+    ". . ."
+    ". . ."
+    ". . .";
+
 }
 
 .world-kitchen { grid-area: world-kitchen; }
@@ -257,17 +244,16 @@ p {
 .nearby-app { grid-area: nearby-app; }
 
 
-html, body , .container {
-  height: 100%;
-  margin: 0;
-}
-
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 
 body {background: hotpink;}
 /* Grid Layout */
+
+.hero-headline {
+  font-size: 4em;
+}
 
 .container {
   display: grid;
@@ -293,8 +279,13 @@ body {background: hotpink;}
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   body  {background: orangered;}
-  /* Grid Layout */
 
+  .hero-headline {
+    font-size: 5em;
+  }
+
+  /* Grid Layout */
+ 
 .container {
   display: grid;
   grid-template-columns: 1.8fr 0.4fr 0.8fr 1fr 1.6fr 0.6fr 1.8fr 0.6fr 0.6fr;
