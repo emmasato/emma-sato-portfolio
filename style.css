@@ -1,6 +1,5 @@
 /* Typography imported from Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400&family=Public+Sans:wght@300;400&display=swap");
+@import url("'https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,400;1,300;1,400&display=swap'");
 
 html {
   box-sizing: border-box;
@@ -16,14 +15,15 @@ html {
 
 /* Styling Variables */
 :root {
-  --accent-color: rgb(66, 88, 255);
-  --body-typeface: 'IBM Plex Mono', monospace;
-  --main-heading: 'Public Sans', sans-serif;
+  --accent-color: rgb(255, 85, 30);
+  --body-typeface: 'Libre Fanklin', sans-serif;
+  --main-heading: 'Libre Franklin', sans-serif;
 }
 
 
 body {
   font-family: var(--body-typeface);
+  font-weight: 300;
   color: black;
   display: flex;
   flex-direction: column;
@@ -33,9 +33,10 @@ body {
 
 
 /* Making all images responsive */
+
 img {
   max-width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -45,25 +46,21 @@ img {
 h1 {
   font-size: 7em;
   font-family: var(--main-heading);
+  font-weight: 400;
   margin-bottom: .2em;
 }
 
 
-
-.hero-headline {
-  color: rgb(66, 110, 255);
-}
-
 /* Hyperlink Styles */
+
 a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: black;
 }
 
-a:hover {
-  background: var(--accent-color);
-  color: white;
-}
+/* a:hover {
+ 
+} */
 
 p {
   margin-bottom: 1em;
@@ -74,10 +71,11 @@ p {
 /* Work Page Layout */
 
 
-.work-wrapper {
+/* .work-wrapper {
   flex: 1;
+   */
   /* Take up the remaining space available */
-}
+/* } */
 
 .portfolio {
   padding: 1rem;
@@ -111,37 +109,28 @@ p {
 }
 
 
-
-
-
-
-
-
 /* Hero */
 
-.branding-navigation {
+.main-nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 1em;
-  align-items: center;
+  align-items: left;
+  
 }
 
 .logo {
-  width: 15em;
-}
-
-.hero-headline-wrapper {
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  padding: 4em 8em;
-  text-align: center;
+  width: 11em;
 }
 
 .hero-headline {
   font-size: 5em;
+}
+
+.hero-header {
+  position: sticky;
+  top: 0;
 }
 
 .footer-navigation {
@@ -154,31 +143,11 @@ p {
 /* Hero */
 
 .hero {
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   background-size: 600%;
-  background-image: var(--gradient);
-  animation: bg-animation 120s infinite alternate;
 }
-
-
-
-
-
-
-
-
-
-.hero-headline-wrapper {
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  padding: 4em 8em;
-  text-align: center;
-}
-
 
 
 /* Project Page */
@@ -221,11 +190,10 @@ p {
   position:absolute;
   background: var(--accent-color);
   color:rgb(255, 255, 255);
-  font-size: 1em;
-  line-height: 1.3;
-  padding:1em;
-  width: 16vw;
-  height: 30vh;
+  font-size: .85em;
+  padding: 1em;
+  width: 8vw;
+  height: 4vh;
 }
 
 /* Grid Layout */
@@ -266,7 +234,7 @@ html, body , .container {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 
-body {background: hotpink;}
+body {background: rgb(253, 170, 212);}
 /* Grid Layout */
 
 .container {
@@ -292,27 +260,48 @@ body {background: hotpink;}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  body  {background: orangered;}
+  body  {background: rgb(197, 231, 183);}
+
   /* Grid Layout */
 
-.container {
-  display: grid;
-  grid-template-columns: 1.8fr 0.4fr 0.8fr 1fr 1.6fr 0.6fr 1.8fr 0.6fr 0.6fr;
-  grid-template-rows: 0.4fr 0.4fr 3fr 0.5fr 0.6fr 0.4fr 2.6fr 1.2fr 1.3fr 1.7fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". . . . . . . . ."
-    "world-kitchen world-kitchen . . . . . . ."
-    "world-kitchen world-kitchen . . . . . . ."
-    ". . . tavolo-lungo tavolo-lungo . . . ."
-    ". . . tavolo-lungo tavolo-lungo . . . ."
-    ". . . . . . . . ."
-    ". . . . . nearby-app nearby-app . ."
-    ". . . . . . . . ."
-    ". . . . . . . . ."
-    ". . . . . . . . .";
-    min-height: 100vh;
-}
+
+  .container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.5fr 1.3fr 0.6fr 1.5fr 0.6fr 1.5fr 2.4fr 1.8fr 2.1fr 1.3fr 0.5fr 0.8fr;
+    grid-template-rows: 1.3fr 0.6fr 1.4fr 1.1fr 0.4fr 0.9fr 0.6fr 1.8fr 0.4fr 1.3fr 1.7fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    padding: 1em;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . . bite bite . . . . . . ."
+      ". . . . bite bite . . . . . portrait portrait"
+      ". boddi boddi . bite bite . . . . . portrait portrait"
+      ". boddi boddi . . . . . . capstone . portrait portrait"
+      ". boddi boddi . . . . . . capstone . . ."
+      ". . . . . . . . . capstone . . ."
+      ". . . . . tavolo-lungo tavolo-lungo . . capstone . . ."
+      ". . . . . tavolo-lungo tavolo-lungo . . . . . ."
+      ". . . . . . . . . . . . ."
+      ". . . . . . . . . . world-kitchen world-kitchen ."
+      "nearby nearby . . . . . when-will-this-place . . world-kitchen world-kitchen ."
+      "nearby nearby . . . . . . . . . . .";
+      min-height: 100vh;
+  }
+  
+  .bite { grid-area: bite; }
+  .boddi { grid-area: boddi; }
+  .portrait { grid-area: portrait; }
+  .capstone { grid-area: capstone; }
+  .tavolo-lungo { grid-area: tavolo-lungo; }
+  .nearby { grid-area: nearby; }
+  .when-will-this-place { grid-area: when-will-this-place; }
+  .world-kitchen { grid-area: world-kitchen; }
+  
 }
 
+/* Error Page 404 */
+
+.error-container {
+  background: --accent-color;
+}
