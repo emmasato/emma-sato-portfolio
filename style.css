@@ -129,7 +129,6 @@ p {
   grid-template-areas:
     "logo . catalogue about";
   padding: 3vh;
-  position: fixed
 }
 
 .logo { 
