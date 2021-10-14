@@ -111,17 +111,46 @@ p {
 
 /* Hero */
 
-.main-nav {
+/* .main-nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 1em;
   align-items: left;
   
+} */
+
+.main-nav {
+  display: grid;
+  grid-template-columns: 1.1fr 1.8fr 0.6fr 0.5fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo . catalogue about";
+  padding: 3vh;
+  position: fixed
 }
 
+.logo { 
+  grid-area: logo; 
+}
+.catalogue { 
+  grid-area: catalogue;
+ }
+.about { 
+  grid-area: about; 
+  justify-self: end;
+  align-self: center;
+}
+
+/* .nav-item {
+  justify-self: center;
+  align-self: right;
+} */
+
 .logo {
-  width: 11em;
+  width: 9em;
 }
 
 .hero-headline {
@@ -196,38 +225,49 @@ p {
   height: 4vh;
 }
 
-/* Grid Layout */
+/* Grid Layout no minimum, smaller tablets and mobile*/
+
+@media only screen and (min-width: 0px) {
+  body  {background: rgb(255, 255, 111);}
 
 .container {
   display: grid;
-  grid-template-columns: 1.8fr 0.4fr 0.8fr 1fr 1.6fr 0.6fr 1.8fr 0.6fr 0.6fr;
-  grid-template-rows: 0.4fr 0.4fr 3fr 0.5fr 0.6fr 0.4fr 2.6fr 1.2fr 1.3fr 1.7fr;
+  grid-template-columns: 1.7fr 0.8fr 0.3fr 1.1fr 1.3fr 0.8fr 1.3fr 0.7fr 1fr;
+  grid-template-rows: 1.6fr 2.2fr 0.7fr 0.8fr 3.4fr 1.3fr 4.4fr 1.7fr 2.1fr 3.4fr 2.3fr 2.6fr 2.5fr 1.1fr 6.8fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
+    ". . . . . . bite bite bite"
+    "boddi boddi boddi . . . bite bite bite"
+    "boddi boddi boddi . . . . . ."
     ". . . . . . . . ."
-    "world-kitchen world-kitchen . . . . . . ."
-    "world-kitchen world-kitchen . . . . . . ."
-    ". . . tavolo-lungo tavolo-lungo . . . ."
-    ". . . tavolo-lungo tavolo-lungo . . . ."
+    ". . . . . . . portrait portrait"
     ". . . . . . . . ."
-    ". . . . . nearby-app nearby-app . ."
+    ". capstone capstone capstone capstone . . . ."
     ". . . . . . . . ."
+    "tavolo-lungo tavolo-lungo tavolo-lungo tavolo-lungo . . . . ."
+    "tavolo-lungo tavolo-lungo tavolo-lungo tavolo-lungo . world-kitchen world-kitchen world-kitchen world-kitchen"
+    ". . . . . world-kitchen world-kitchen world-kitchen world-kitchen"
     ". . . . . . . . ."
-    ". . . . . . . . .";
-    min-height: 100vh;
+    ". . when-will-this-place when-will-this-place when-will-this-place when-will-this-place when-will-this-place when-will-this-place ."
+    ". . . . . . . . ."
+    "nearby nearby nearby nearby . . . . .";
 }
 
-.world-kitchen { grid-area: world-kitchen; }
-
+.boddi { grid-area: boddi; }
+.bite { grid-area: bite; }
+.portrait { grid-area: portrait; }
+.capstone { grid-area: capstone; }
 .tavolo-lungo { grid-area: tavolo-lungo; }
-
-.nearby-app { grid-area: nearby-app; }
+.world-kitchen { grid-area: world-kitchen; }
+.when-will-this-place { grid-area: when-will-this-place; }
+.nearby { grid-area: nearby; }
 
 
 html, body , .container {
   height: 100%;
   margin: 0;
+}
 }
 
 
@@ -258,9 +298,10 @@ body {background: rgb(253, 170, 212);}
 }
 }
 
+
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  body  {background: rgb(197, 231, 183);}
+  body  {background: rgb(255, 255, 255);}
 
   /* Grid Layout */
 
@@ -271,7 +312,7 @@ body {background: rgb(253, 170, 212);}
     grid-template-rows: 1.3fr 0.6fr 1.4fr 1.1fr 0.4fr 0.9fr 0.6fr 1.8fr 0.4fr 1.3fr 1.7fr 1fr;
     grid-auto-columns: 1fr;
     gap: 0px 0px;
-    padding: 1em;
+    padding: 3vh;
     grid-auto-flow: row;
     grid-template-areas:
       ". . . . bite bite . . . . . . ."
