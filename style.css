@@ -4,6 +4,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 *,
@@ -20,7 +21,7 @@ html {
   --main-heading: 'Libre Franklin', sans-serif;
 }
 
-
+/* Global styles and mobile styles, styles for larger screesn are way down below */
 body {
   font-family: var(--body-typeface);
   font-weight: 300;
@@ -28,6 +29,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background: rgb(255, 255, 111);
 }
 
 
@@ -37,7 +39,7 @@ body {
 img {
   max-width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 
@@ -74,7 +76,7 @@ p {
 /* .work-wrapper {
   flex: 1;
    */
-  /* Take up the remaining space available */
+/* Take up the remaining space available */
 /* } */
 
 .portfolio {
@@ -89,6 +91,44 @@ p {
   /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width. Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
 }
 
+/* Define grid areas once */
+.bite {
+  grid-area: bite;
+}
+
+.boddi {
+  grid-area: boddi;
+}
+
+.portrait {
+  grid-area: portrait;
+}
+
+.capstone {
+  grid-area: capstone;
+}
+
+.tavolo-lungo {
+  grid-area: tavolo-lungo;
+}
+
+.nearby {
+  grid-area: nearby;
+}
+
+.when-will-this-place {
+  grid-area: when-will-this-place;
+}
+
+.world-kitchen {
+  grid-area: world-kitchen;
+}
+
+
+
+
+
+/* Hero Styles */
 
 .hero-footer {
   color: white;
@@ -131,14 +171,16 @@ p {
   padding: 3vh;
 }
 
-.logo { 
-  grid-area: logo; 
+.logo {
+  grid-area: logo;
 }
-.catalogue { 
+
+.catalogue {
   grid-area: catalogue;
- }
-.about { 
-  grid-area: about; 
+}
+
+.about {
+  grid-area: about;
   justify-self: end;
   align-self: center;
 }
@@ -215,29 +257,29 @@ p {
 }
 
 #tooltip {
-  position:absolute;
+  position: absolute;
   background: var(--accent-color);
-  color:rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   font-size: .85em;
   padding: 1em;
   width: 8vw;
   height: 4vh;
 }
 
-/* Grid Layout no minimum, smaller tablets and mobile*/
 
-@media only screen and (min-width: 0px) {
-  body  {background: rgb(255, 255, 111);}
-
+/* Mobile Grid Layout */
 .container {
   display: grid;
   grid-template-columns: 1.7fr 0.8fr 0.3fr 1.1fr 1.3fr 0.8fr 1.3fr 0.7fr 1fr;
-  grid-template-rows: 1.6fr 2.2fr 0.7fr 0.8fr 3.4fr 1.3fr 4.4fr 1.7fr 2.1fr 3.4fr 2.3fr 2.6fr 2.5fr 1.1fr 6.8fr;
+  /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+  grid-template-rows: repeat(15, minmax(100px, auto));
+
+
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    ". . . . . . bite bite bite"
-    "boddi boddi boddi . . . bite bite bite"
+    ". . . . . bite bite bite bite"
+    "boddi boddi boddi . . bite bite bite bite"
     "boddi boddi boddi . . . . . ."
     ". . . . . . . . ."
     ". . . . . . . portrait portrait"
@@ -253,62 +295,65 @@ p {
     "nearby nearby nearby nearby . . . . .";
 }
 
-.boddi { grid-area: boddi; }
-.bite { grid-area: bite; }
-.portrait { grid-area: portrait; }
-.capstone { grid-area: capstone; }
-.tavolo-lungo { grid-area: tavolo-lungo; }
-.world-kitchen { grid-area: world-kitchen; }
-.when-will-this-place { grid-area: when-will-this-place; }
-.nearby { grid-area: nearby; }
+/* Error Page 404 */
 
+.error-container {
+  background: --accent-color;
+}
 
-html, body , .container {
-  height: 100%;
-  margin: 0;
-}
-}
 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 
-body {background: rgb(253, 170, 212);}
-/* Grid Layout */
+  body {
+    background: rgb(253, 170, 212);
+  }
 
-.container {
-  display: grid;
-  grid-template-columns: 1.8fr 0.4fr 0.8fr 1fr 1.6fr 0.6fr 1.8fr 0.6fr 0.6fr;
-  grid-template-rows: 0.4fr 0.4fr 3fr 0.5fr 0.6fr 0.4fr 2.6fr 1.2fr 1.3fr 1.7fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". . . . . . . . ."
-    "world-kitchen world-kitchen . . . . . . ."
-    "world-kitchen world-kitchen . . . . . . ."
-    ". . . tavolo-lungo tavolo-lungo . . . ."
-    ". . . tavolo-lungo tavolo-lungo . . . ."
-    ". . . . . . . . ."
-    ". . . . . nearby-app nearby-app . ."
-    ". . . . . . . . ."
-    ". . . . . . . . ."
-    ". . . . . . . . .";
-    min-height: 100vh;
-}
+  /* Tablet & Large Grid Layout */
+  .container {
+    display: grid;
+    grid-template-columns: 1.7fr 0.8fr 0.3fr 1.1fr 1.3fr 0.8fr 1.3fr 0.7fr 1fr;
+    grid-template-rows: 1.6fr 2.2fr 0.7fr 0.8fr 3.4fr 1.3fr 4.4fr 1.7fr 2.1fr 3.4fr 2.3fr 2.6fr 2.5fr 1.1fr 6.8fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . . . . bite bite bite"
+      "boddi boddi boddi . . . bite bite bite"
+      "boddi boddi boddi . . . . . ."
+      ". . . . . . . . ."
+      ". . . . . . . portrait portrait"
+      ". . . . . . . . ."
+      ". capstone capstone capstone capstone . . . ."
+      ". . . . . . . . ."
+      "tavolo-lungo tavolo-lungo tavolo-lungo tavolo-lungo . . . . ."
+      "tavolo-lungo tavolo-lungo tavolo-lungo tavolo-lungo . world-kitchen world-kitchen world-kitchen world-kitchen"
+      ". . . . . world-kitchen world-kitchen world-kitchen world-kitchen"
+      ". . . . . . . . ."
+      ". . when-will-this-place when-will-this-place when-will-this-place when-will-this-place when-will-this-place when-will-this-place ."
+      ". . . . . . . . ."
+      "nearby nearby nearby nearby . . . . .";
+  }
+
+
+
+
 }
 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  body  {background: rgb(255, 255, 255);}
+  body {
+    background: rgb(255, 255, 255);
+  }
 
-  /* Grid Layout */
-
-
+  /* Extra Large Grid Layout */
   .container {
     display: grid;
-    grid-template-columns: 1.2fr 0.5fr 1.3fr 0.6fr 1.5fr 0.6fr 1.5fr 2.4fr 1.8fr 2.1fr 1.3fr 0.5fr 0.8fr;
-    grid-template-rows: 1.3fr 0.6fr 1.4fr 1.1fr 0.4fr 0.9fr 0.6fr 1.8fr 0.4fr 1.3fr 1.7fr 1fr;
+    grid-template-columns: repeat(13, 7.69230769231vw);
+    grid-template-rows: repeat(12, 7.5vh);
+    /* grid-template-columns: 1.2fr 0.5fr 1.3fr 0.6fr 1.5fr 0.6fr 1.5fr 2.4fr 1.8fr 2.1fr 1.3fr 0.5fr 0.8fr; */
+    /* grid-template-rows: 1.3fr 0.6fr 1.4fr 1.1fr 0.4fr 0.9fr 0.6fr 1.8fr 0.4fr 1.3fr 1.7fr 1fr; */
     grid-auto-columns: 1fr;
     gap: 0px 0px;
     padding: 3vh;
@@ -326,22 +371,9 @@ body {background: rgb(253, 170, 212);}
       ". . . . . . . . . . world-kitchen world-kitchen ."
       "nearby nearby . . . . . when-will-this-place . . world-kitchen world-kitchen ."
       "nearby nearby . . . . . . . . . . .";
-      min-height: 100vh;
+    min-height: 100vh;
   }
-  
-  .bite { grid-area: bite; }
-  .boddi { grid-area: boddi; }
-  .portrait { grid-area: portrait; }
-  .capstone { grid-area: capstone; }
-  .tavolo-lungo { grid-area: tavolo-lungo; }
-  .nearby { grid-area: nearby; }
-  .when-will-this-place { grid-area: when-will-this-place; }
-  .world-kitchen { grid-area: world-kitchen; }
-  
-}
 
-/* Error Page 404 */
 
-.error-container {
-  background: --accent-color;
+
 }
