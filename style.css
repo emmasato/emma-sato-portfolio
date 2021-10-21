@@ -37,9 +37,9 @@ body {
 /* Making all images responsive */
 
 img {
+  max-height: 100%;
   max-width: 100%;
-  height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 
@@ -86,7 +86,7 @@ p {
 /* Defining the work page grid */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   grid-gap: 1rem;
   /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width. Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
 }
@@ -122,6 +122,14 @@ p {
 
 .world-kitchen {
   grid-area: world-kitchen;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.about {
+  grid-area: about;
 }
 
 
@@ -168,7 +176,6 @@ p {
   grid-auto-flow: row;
   grid-template-areas:
     "logo . catalogue about";
-  padding: 3vh;
 }
 
 .logo {
@@ -272,12 +279,13 @@ p {
   display: grid;
   grid-template-columns: 1.7fr 0.8fr 0.3fr 1.1fr 1.3fr 0.8fr 1.3fr 0.7fr 1fr;
   /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
-  grid-template-rows: repeat(15, minmax(100px, auto));
-
-
+  grid-template-rows: 60px repeat(15, minmax(100px, auto));
+  padding-left: 15px;
+  padding-right: 15px;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
+    "logo logo logo . . . . . about"
     ". . . . . bite bite bite bite"
     "boddi boddi boddi . . bite bite bite bite"
     "boddi boddi boddi . . . . . ."
@@ -313,31 +321,30 @@ p {
   /* Tablet & Large Grid Layout */
   .container {
     display: grid;
-    grid-template-columns: 1.7fr 0.8fr 0.3fr 1.1fr 1.3fr 0.8fr 1.3fr 0.7fr 1fr;
-    grid-template-rows: 1.6fr 2.2fr 0.7fr 0.8fr 3.4fr 1.3fr 4.4fr 1.7fr 2.1fr 3.4fr 2.3fr 2.6fr 2.5fr 1.1fr 6.8fr;
+    grid-template-columns: repeat(3, 5vw) minmax(0, 1fr) repeat(3, 5vw) 8vw minmax(0, 1fr) 8vw repeat(3, 5vw);
+    grid-template-rows: 60px repeat(9, 10vh);
+    /* grid-template-columns: 1.2fr 0.5fr 1.3fr 0.6fr 1.5fr 0.6fr 1.5fr 2.4fr 1.8fr 2.1fr 1.3fr 0.5fr 0.8fr; */
+    /* grid-template-rows: 1.3fr 0.6fr 1.4fr 1.1fr 0.4fr 0.9fr 0.6fr 1.8fr 0.4fr 1.3fr 1.7fr 1fr; */
+    grid-auto-columns: 1fr;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      ". . . . . . bite bite bite"
-      "boddi boddi boddi . . . bite bite bite"
-      "boddi boddi boddi . . . . . ."
-      ". . . . . . . . ."
-      ". . . . . . . portrait portrait"
-      ". . . . . . . . ."
-      ". capstone capstone capstone capstone . . . ."
-      ". . . . . . . . ."
-      "tavolo-lungo tavolo-lungo tavolo-lungo tavolo-lungo . . . . ."
-      "tavolo-lungo tavolo-lungo tavolo-lungo tavolo-lungo . world-kitchen world-kitchen world-kitchen world-kitchen"
-      ". . . . . world-kitchen world-kitchen world-kitchen world-kitchen"
-      ". . . . . . . . ."
-      ". . when-will-this-place when-will-this-place when-will-this-place when-will-this-place when-will-this-place when-will-this-place ."
-      ". . . . . . . . ."
-      "nearby nearby nearby nearby . . . . .";
+      "logo logo logo . . . . . . . . . about"
+      ". . . . bite bite . . . . . . ."
+      ". . . . bite bite . . . . . portrait portrait"
+      ". boddi boddi . bite bite . . . . . portrait portrait"
+      ". boddi boddi . . . . . . capstone . portrait portrait"
+      ". boddi boddi . . . . . . capstone . . ."
+      ". . . . . tavolo-lungo tavolo-lungo . . capstone . . ."
+      ". . . . . tavolo-lungo tavolo-lungo . . . . . ."
+      ". . . . . . . . . . world-kitchen world-kitchen ."
+      "nearby nearby . . . . . when-will-this-place . . world-kitchen world-kitchen ."
+      "nearby nearby . . . . . . . . . . .";
+    max-height: 100%;
   }
-
-
-
-
 }
 
 
@@ -350,30 +357,27 @@ p {
   /* Extra Large Grid Layout */
   .container {
     display: grid;
-    grid-template-columns: repeat(13, 7.69230769231vw);
-    grid-template-rows: repeat(12, 7.5vh);
+    grid-template-columns: repeat(3, 5vw) minmax(0, 1fr) repeat(3, 5vw) 8vw minmax(0, 1fr) 8vw repeat(3, 5vw);
+    grid-template-rows: 60px repeat(10, 10vh);
     /* grid-template-columns: 1.2fr 0.5fr 1.3fr 0.6fr 1.5fr 0.6fr 1.5fr 2.4fr 1.8fr 2.1fr 1.3fr 0.5fr 0.8fr; */
     /* grid-template-rows: 1.3fr 0.6fr 1.4fr 1.1fr 0.4fr 0.9fr 0.6fr 1.8fr 0.4fr 1.3fr 1.7fr 1fr; */
     grid-auto-columns: 1fr;
+    padding-left: 15px;
+    padding-right: 15px;
     gap: 0px 0px;
-    padding: 3vh;
     grid-auto-flow: row;
     grid-template-areas:
+      "logo logo logo . . . . . . . . . about"
       ". . . . bite bite . . . . . . ."
       ". . . . bite bite . . . . . portrait portrait"
       ". boddi boddi . bite bite . . . . . portrait portrait"
       ". boddi boddi . . . . . . capstone . portrait portrait"
       ". boddi boddi . . . . . . capstone . . ."
-      ". . . . . . . . . capstone . . ."
       ". . . . . tavolo-lungo tavolo-lungo . . capstone . . ."
       ". . . . . tavolo-lungo tavolo-lungo . . . . . ."
-      ". . . . . . . . . . . . ."
       ". . . . . . . . . . world-kitchen world-kitchen ."
       "nearby nearby . . . . . when-will-this-place . . world-kitchen world-kitchen ."
       "nearby nearby . . . . . . . . . . .";
-    min-height: 100vh;
+    max-height: 100%;
   }
-
-
-
 }
