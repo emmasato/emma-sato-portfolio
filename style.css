@@ -157,18 +157,17 @@ p {
 }
 
 .main-footer {
-  min-height: 100vh;
+  max-height: 100%;
   background: var(--accent-color);
   color: white;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 33vh 33vh 33vh;
   padding: 0px 15px 0px 15px;
   grid-auto-flow: row;
   grid-template-areas: 
     "contact"
     "bio"
-    "."
     "profile-img";
 }
 
@@ -192,7 +191,7 @@ p {
   text-align: center;
 }
 
-.about {
+.about-nav {
   grid-area: about;
   justify-self: end;
   align-self: center;
@@ -352,7 +351,7 @@ p {
 
   .main-footer {
     grid-template-columns: 1fr 20vw 20vw 30vw;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     padding: 0px 15px 0px 15px;
     column-gap: .25vw;
     grid-auto-flow: row;
