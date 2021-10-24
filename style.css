@@ -133,6 +133,16 @@ p {
   grid-area: about;
 }
 
+.copyright {
+  grid-area: copyright;
+}
+
+.random-phrase {
+  grid-area: random-phrase;
+  justify-self: end;
+  align-self: center;
+}
+
 /* Defining main nav once */
 
 .main-nav {
@@ -162,7 +172,7 @@ p {
   color: white;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 33vh 33vh 33vh;
+  grid-template-rows: 33vh 33vh 30vh;
   padding: 0px 15px 0px 15px;
   grid-auto-flow: row;
   grid-template-areas: 
@@ -201,11 +211,20 @@ p {
   font-size: 5em;
 }
 
-.footer-navigation {
+ /* .footer-navigation {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1em;
+  padding: 1em; 
+} */
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: .2fr;
+  padding: 0px 15px 0px 15px;
+  grid-auto-flow: row;
+  grid-template-areas: "copyright random-phrase";
 }
 
 /* Hero */
@@ -398,7 +417,7 @@ p {
   .main-footer {
     grid-template-columns: 1fr 20vw 20vw 30vw;
     grid-template-rows: 1fr 1fr;
-    padding: 0px 15px 0px 15px;
+    padding: 15px 15px 0px 15px;
     column-gap: .25vw;
     grid-auto-flow: row;
     grid-template-areas: 
