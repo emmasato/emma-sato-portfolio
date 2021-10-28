@@ -147,14 +147,16 @@ p {
 .main-nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: .3fr;
+  grid-template-rows: 5vh;
   padding: 0px 15px 0px 15px;
   column-gap: 0px;
   grid-auto-flow: row;
   grid-template-areas:
-  "logo about";
+    "logo about";
   position: sticky;
   top: 0;
+  height: 5vh;
+  background: #ddd;
 
 }
 
@@ -174,7 +176,7 @@ p {
   grid-template-rows: 33vh 33vh 30vh;
   padding: 0px 15px 0px 15px;
   grid-auto-flow: row;
-  grid-template-areas: 
+  grid-template-areas:
     "contact"
     "bio"
     "profile-img";
@@ -210,7 +212,7 @@ p {
   font-size: 5em;
 }
 
- /* .footer-navigation {
+/* .footer-navigation {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -224,6 +226,8 @@ p {
   padding: 0px 15px 0px 15px;
   grid-auto-flow: row;
   grid-template-areas: "copyright random-phrase";
+  background: rgb(63, 115, 255);
+  height: 5vh;
 }
 
 /* Hero */
@@ -332,7 +336,7 @@ p {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -373,11 +377,11 @@ p {
     padding: 0px 15px 0px 15px;
     column-gap: .25vw;
     grid-auto-flow: row;
-    grid-template-areas: 
+    grid-template-areas:
       ". contact bio profile-img"
       ". . . .";
   }
-  
+
 }
 
 
@@ -410,7 +414,8 @@ p {
       ". . . . . . . . . . world-kitchen world-kitchen ."
       "nearby nearby nearby . . . when-will-this-place when-will-this-place . . world-kitchen world-kitchen ."
       "nearby nearby nearby . . . . . . . . . .";
-    /* max-height: 100%; */
+    max-height: 90vh;
+    background: rgb(253, 170, 212);
   }
 
   .main-footer {
@@ -419,7 +424,7 @@ p {
     padding: 15px 15px 0px 15px;
     column-gap: .25vw;
     grid-auto-flow: row;
-    grid-template-areas: 
+    grid-template-areas:
       ". contact bio profile-img"
       ". . . .";
   }
