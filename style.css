@@ -65,6 +65,7 @@ a {
 
 p {
   margin-bottom: 1em;
+  line-height: 1.3em;
 }
 
 
@@ -156,7 +157,6 @@ p {
   position: sticky;
   top: 0;
   height: 5vh;
-  background: #ddd;
 
 }
 
@@ -241,9 +241,8 @@ p {
 
 /* About Page */
 
-.about-container {
+.about-page {
   background-color: var(--accent-color);
-  min-height: 100vh;
 }
 
 
@@ -397,7 +396,7 @@ p {
   .container {
     display: grid;
 
-    grid-template-columns: 5vw 5vw 5vw 5vw 5vw 5vw 1fr 5vw 5vw 5vw 5vw 5vw 5vw;
+    grid-template-columns: 5vw 5vw 5vw 1fr 5vw 5vw 1fr 5vw 5vw 5vw 5vw 5vw 5vw;
     grid-template-rows: repeat(10, 9vh);
     grid-auto-columns: 1fr;
     padding-left: 15px;
