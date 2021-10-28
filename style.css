@@ -1,6 +1,36 @@
-/* Typography imported from Google Fonts */
+/* Typography imported from google fonts and https://www.dropbox.com/sh/xytqjyhmvi2qyj7/AAB7CdUDNq4XnMhbJFatzm8Ha?dl=0 */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* @font-face {
+  font-family: Anderson-Grotesk;
+  src: url(fonts/AndersonGrotesk.otf);
+}
+
+@font-face {
+  font-family: Anderson-Grotesk-Light;
+  src: url(fonts/AndersonGrotesk-Light.otf);
+} */
+
+/* @font-face {
+  font-family: Kollektif;
+  src: url(fonts/Kollektif.otf);
+} */
+
+/* @font-face {
+  font-family: Silka;
+  src: url(fonts/Silka-Regular.otf);
+} */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap'); */
+
+/* @font-face {
+  font-family: PP Neue Montreal Book;
+  src: url(fonts/PPNeueMontreal-Book.otf);
+} */
+
+@font-face {
+  font-family: PP Eiko;
+  src: url(fonts/PPEiko-Thin.otf);
+}
 
 html {
   box-sizing: border-box;
@@ -18,19 +48,19 @@ html {
 /* Styling Variables */
 :root {
   --accent-color: rgb(255, 75, 30);
-  --body-typeface: 'Open Sans', sans-serif;
-  --main-heading: 'Open Sans', sans-serif;
+  --body-typeface: 'PP Eiko', serif;
+  --main-heading: 'PP Eiko', serif;
 }
 
 /* Global styles and mobile styles, styles for larger screesn are way down below */
 body {
   font-family: var(--body-typeface);
-  font-weight: 300;
   color: black;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   background: white;
+  /* letter-spacing: -.5px; */
   
 }
 
@@ -76,6 +106,7 @@ a.phrase {
 } */
 
 p {
+  font-size: 1.2em;
   margin-bottom: 1em;
   line-height: 1.5em;
 }
