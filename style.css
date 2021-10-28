@@ -1,5 +1,6 @@
 /* Typography imported from Google Fonts */
-@import url("'https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,400;1,300;1,400&display=swap'");
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 html {
   box-sizing: border-box;
@@ -17,8 +18,8 @@ html {
 /* Styling Variables */
 :root {
   --accent-color: rgb(255, 75, 30);
-  --body-typeface: 'Libre Fanklin', sans-serif;
-  --main-heading: 'Libre Franklin', sans-serif;
+  --body-typeface: 'Open Sans', sans-serif;
+  --main-heading: 'Open Sans', sans-serif;
 }
 
 /* Global styles and mobile styles, styles for larger screesn are way down below */
@@ -30,6 +31,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background: white;
+  
 }
 
 
@@ -51,11 +53,21 @@ h1 {
   margin-bottom: .2em;
 }
 
+h3 {
+  font-size: .75em;
+  font-family: var(--body-typeface);
+  font-weight: 400;
+}
 
 /* Hyperlink Styles */
 
 a {
   text-decoration: none;
+  color: black;
+}
+
+a.phrase {
+  text-decoration: underline;
   color: black;
 }
 
@@ -65,7 +77,7 @@ a {
 
 p {
   margin-bottom: 1em;
-  line-height: 1.3em;
+  line-height: 1.5em;
 }
 
 
@@ -126,7 +138,8 @@ p {
 
 .logo {
   grid-area: logo;
-  width: 9em;
+  width: 8em;
+  align-self: center;
 }
 
 .about {
@@ -137,8 +150,8 @@ p {
   grid-area: copyright;
 }
 
-.random-phrase {
-  grid-area: random-phrase;
+.phrase {
+  grid-area: phrase;
   justify-self: end;
   align-self: center;
 }
@@ -167,7 +180,7 @@ p {
   color: white;
 }
 
-.main-footer {
+.about-container {
   max-height: 100%;
   background: var(--accent-color);
   color: white;
@@ -202,7 +215,7 @@ p {
   text-align: center;
 }
 
-.about-nav {
+.nav-about {
   grid-area: about;
   justify-self: end;
   align-self: center;
@@ -225,7 +238,7 @@ p {
   grid-template-rows: .2fr;
   padding: 0px 15px 0px 15px;
   grid-auto-flow: row;
-  grid-template-areas: "copyright random-phrase";
+  grid-template-areas: "copyright phrase";
   background: rgb(63, 115, 255);
   height: 5vh;
 }
@@ -370,7 +383,7 @@ p {
     max-height: 100%;
   }
 
-  .main-footer {
+  .about-container {
     grid-template-columns: 1fr 20vw 20vw 30vw;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     padding: 0px 15px 0px 15px;

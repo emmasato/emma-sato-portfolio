@@ -4,16 +4,18 @@
 //You are free to use this script as you want, but please, credit me :)
 //This document is commented for an easier use !
 
+
 var nameArray = [
-  "looking for answers.",
-  "on the run.",
-  "wondering where all the time has      gone.",
-  "packing up her soapbox.",
-  "having her cake and eating it,        too.",
-  "commiting a faux paus",
-  "engaging serendipity.",
-  "guessing, and getting it right."
+  "<a class='phrase' href='https://poets.org/poem/revolutionary-letter-2'>looking for answers.</a>",
+  "<a class='phrase' href='#'>on the run.</a>",
+  "<a class='phrase' href='https://www.youtube.com/watch?v=ZFq_Ib8BkVI'>wondering where all the time has gone.</a>",
+  "<a class='phrase' href='#'>packing up her soapbox.</a>.",
+  "<a class='phrase' href='#'>having her cake and eating it, too.</a>",
+  "<a class='phrase' href='#'>commiting a faux paus.</a>",
+  "<a class='phrase' href='#'>engaging serendipity.</a>",
+  "<a class='phrase' href='#'>guessing, and getting it right.</a>"
 ]; //One of those will be randomly chosen
+
 
 var lastIndex = 0; //Used to remember the last word picked
 
@@ -29,13 +31,13 @@ function getRandomInt(iMin, iMax) {
 }
 
 function pickRandomName() {
-  var domHeaderName = document.getElementById("randomPhrase"); //Put the ID of the DOM element you want to change here
+  var domHeaderName = document.getElementById("nameChange"); //Put the ID of the DOM element you want to change here
   var randomIndex = getRandomInt(0, nameArray.length);
 
   //Put the randomly chosen name in the DOM
   domHeaderName.innerHTML = nameArray[randomIndex];
   //loop
-  setTimeout(pickRandomName, 2000); //Loop every 2000ms (2s)
+  setTimeout(pickRandomName, 6000); //Loop every 2000ms (2s)
 }
 
 pickRandomName();
