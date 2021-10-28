@@ -5,7 +5,7 @@
 //This document is commented for an easier use !
 
 var nameArray = [
-  "looking for answers.",
+  "<a href="https://www.google.com/">looking for answers.</a>",
   "on the run.",
   "wondering where all the time has      gone.",
   "packing up her soapbox.",
