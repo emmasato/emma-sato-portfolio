@@ -346,7 +346,7 @@ p {
   .container {
     display: grid;
     grid-template-columns: repeat(3, 5vw) minmax(0, 1fr) repeat(3, 5vw) 8vw minmax(0, 1fr) 8vw repeat(3, 5vw);
-    grid-template-rows: 60px repeat(8, 10vh);
+    grid-template-rows: repeat(10, 9vh);
     grid-auto-columns: 1fr;
     padding-left: 15px;
     padding-right: 15px;
@@ -393,7 +393,7 @@ p {
   .container {
     display: grid;
     grid-template-columns: repeat(3, 5vw) minmax(0, 1fr) repeat(3, 5vw) 8vw minmax(0, 1fr) 8vw repeat(3, 5vw);
-    grid-template-rows: 60px repeat(9, 10vh);
+    grid-template-rows: repeat(10, 9vh);
     grid-auto-columns: 1fr;
     padding-left: 15px;
     padding-right: 15px;
