@@ -126,6 +126,7 @@ p {
 .logo {
   grid-area: logo;
   width: 9em;
+  
 }
 
 .about {
@@ -365,9 +366,9 @@ p {
       ". boddi boddi . . . . . . capstone . . ."
       ". . . . . tavolo-lungo tavolo-lungo . . capstone . . ."
       ". . . . . tavolo-lungo tavolo-lungo . . . . . ."
-      ". . . . . . . . . . world-kitchen world-kitchen ."
+      "nearby nearby nearby . . . . . . . world-kitchen world-kitchen ."
       "nearby nearby nearby . . . when-will-this-place when-will-this-place . . world-kitchen world-kitchen ."
-      "nearby nearby nearby . . . . . . . . . .";
+      ". . . . . . . . . . . . .";
     max-height: 100%;
   }
 
@@ -411,9 +412,9 @@ p {
       ". boddi boddi . . . . . . capstone . . ."
       ". . . . . tavolo-lungo tavolo-lungo . . capstone . . ."
       ". . . . . tavolo-lungo tavolo-lungo . . . . . ."
-      ". . . . . . . . . . world-kitchen world-kitchen ."
+      "nearby nearby nearby . . . . . . . world-kitchen world-kitchen ."
       "nearby nearby nearby . . . when-will-this-place when-will-this-place . . world-kitchen world-kitchen ."
-      "nearby nearby nearby . . . . . . . . . .";
+      ". . . . . . . . . . . . .";
     max-height: 90vh;
     background: rgb(253, 170, 212);
   }
