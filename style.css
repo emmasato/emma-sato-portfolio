@@ -126,7 +126,6 @@ p {
 .logo {
   grid-area: logo;
   width: 9em;
-  
 }
 
 .about {
@@ -366,9 +365,9 @@ p {
       ". boddi boddi . . . . . . capstone . . ."
       ". . . . . tavolo-lungo tavolo-lungo . . capstone . . ."
       ". . . . . tavolo-lungo tavolo-lungo . . . . . ."
-      "nearby nearby nearby . . . . . . . world-kitchen world-kitchen ."
+      ". . . . . . . . . . world-kitchen world-kitchen ."
       "nearby nearby nearby . . . when-will-this-place when-will-this-place . . world-kitchen world-kitchen ."
-      ". . . . . . . . . . . . .";
+      "nearby nearby nearby . . . . . . . . . .";
     max-height: 100%;
   }
 
@@ -397,7 +396,8 @@ p {
   /* Extra Large Grid Layout */
   .container {
     display: grid;
-    grid-template-columns: repeat(3, 5vw) minmax(0, 1fr) repeat(3, 5vw) 8vw minmax(0, 1fr) 8vw repeat(3, 5vw);
+
+    grid-template-columns: 5vw 5vw 5vw 5vw 5vw 5vw 1fr 5vw 5vw 5vw 5vw 5vw 5vw;
     grid-template-rows: repeat(10, 9vh);
     grid-auto-columns: 1fr;
     padding-left: 15px;
@@ -412,9 +412,9 @@ p {
       ". boddi boddi . . . . . . capstone . . ."
       ". . . . . tavolo-lungo tavolo-lungo . . capstone . . ."
       ". . . . . tavolo-lungo tavolo-lungo . . . . . ."
-      "nearby nearby nearby . . . . . . . world-kitchen world-kitchen ."
+      ". . . . . . . . . . world-kitchen world-kitchen ."
       "nearby nearby nearby . . . when-will-this-place when-will-this-place . . world-kitchen world-kitchen ."
-      ". . . . . . . . . . . . .";
+      "nearby nearby nearby . . . . . . . . . .";
     max-height: 90vh;
     background: rgb(253, 170, 212);
   }
