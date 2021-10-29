@@ -27,9 +27,19 @@
   src: url(fonts/PPNeueMontreal-Book.otf);
 } */
 
-@font-face {
+/* @font-face {
   font-family: PP Eiko;
   src: url(fonts/PPEiko-Thin.otf);
+} */
+
+@font-face {
+  font-family: Open Sauce One Regular;
+  src: url(fonts/OpenSauceOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: Open Sauce One SemiBold;
+  src: url(fonts/OpenSauceOne-SemiBold.ttf);
 }
 
 html {
@@ -48,8 +58,8 @@ html {
 /* Styling Variables */
 :root {
   --accent-color: rgb(255, 75, 30);
-  --body-typeface: 'PP Eiko', serif;
-  --main-heading: 'PP Eiko', serif;
+  --body-typeface: 'Open Sauce One Regular', sans-serif;
+  --main-heading: 'Open Sauce One SemiBold', sans-serif;
 }
 
 /* Global styles and mobile styles, styles for larger screesn are way down below */
