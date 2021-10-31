@@ -319,19 +319,15 @@ a.contact-link:hover {
 
 .project-wrapper {
   display: flex;
+  flex-direction: column;  
   justify-content: space-between;
   background: white;
   padding: 1em;
 }
 
 .project-aside {
-  width: 40vw;
-  height: 40vh;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 5vh;
+  width: 100%;
   color: rgb(63, 115, 255);
-  background: rgb(255, 255, 255);
   padding: 1em;
 }
 
@@ -345,8 +341,7 @@ a.contact-link:hover {
 }
 
 .project-details {
-  width: 60vw;
-  background: rgb(255, 255, 255);
+  width: 100%;
   padding: 1em;
 }
 
@@ -356,8 +351,11 @@ a.contact-link:hover {
   color: rgb(255, 255, 255);
   font-size: .85em;
   padding: 1em;
-  width: 8vw;
-  height: 4vh;
+  width: 16rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Error Page 404 */
@@ -515,6 +513,26 @@ a.contact-link:hover {
     left:0;
     right:0;
   }
+
+
+  /* Project Page Styles on Large Screens */
+
+  .project-wrapper {
+    flex-direction: row;  
+  }
+  .project-aside {
+    width: 40vw;
+    height: 40vh;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5vh;
+  }
+  
+  .project-details {
+    width: 60vw;
+  }
+
+
 
 }
 
