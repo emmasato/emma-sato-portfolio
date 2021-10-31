@@ -1,54 +1,4 @@
-/* Typography */
-
-@font-face {
-  font-family: 'open_sauce_oneregular';
-  src: url('opensauceone-regular-webfont.eot');
-  src: url('opensauceone-regular-webfont.eot?#iefix') format('embedded-opentype'),
-       url('opensauceone-regular-webfont.woff2') format('woff2'),
-       url('opensauceone-regular-webfont.woff') format('woff'),
-       url('opensauceone-regular-webfont.ttf') format('truetype'),
-       url('opensauceone-regular-webfont.svg#open_sauce_oneregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-
-}
-
-@font-face {
-  font-family: 'open_sauce_onebold';
-  src: url('opensauceone-bold-webfont.eot');
-  src: url('opensauceone-bold-webfont.eot?#iefix') format('embedded-opentype'),
-       url('opensauceone-bold-webfont.woff2') format('woff2'),
-       url('opensauceone-bold-webfont.woff') format('woff'),
-       url('opensauceone-bold-webfont.ttf') format('truetype'),
-       url('opensauceone-bold-webfont.svg#open_sauce_onebold') format('svg');
-  font-weight: normal;
-  font-style: normal;
-
-}
-
-@font-face {
-  font-family: 'liftedsans';
-  src: url('lifted-sans-webfont.eot');
-  src: url('lifted-sans-webfont.eot?#iefix') format('embedded-opentype'),
-       url('lifted-sans-webfont.woff2') format('woff2'),
-       url('lifted-sans-webfont.woff') format('woff'),
-       url('lifted-sans-webfont.ttf') format('truetype'),
-       url('lifted-sans-webfont.svg#liftedsans') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'liftedserif';
-  src: url('lifted-serif-webfont.eot');
-  src: url('lifted-serif-webfont.eot?#iefix') format('embedded-opentype'),
-       url('lifted-serif-webfont.woff2') format('woff2'),
-       url('lifted-serif-webfont.woff') format('woff'),
-       url('lifted-serif-webfont.ttf') format('truetype'),
-       url('lifted-serif-webfont.svg#liftedserif') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+@import url('fonts.css');
 
 html {
   box-sizing: border-box;
@@ -78,8 +28,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background: white;
-  
-  
 }
 
 
@@ -91,8 +39,13 @@ img {
   object-fit: cover;
 }
 
-
-/* Typography */
+/*
+████████ ██    ██ ██████   ██████   ██████  ██████   █████  ██████  ██   ██ ██    ██ 
+   ██     ██  ██  ██   ██ ██    ██ ██       ██   ██ ██   ██ ██   ██ ██   ██  ██  ██  
+   ██      ████   ██████  ██    ██ ██   ███ ██████  ███████ ██████  ███████   ████   
+   ██       ██    ██      ██    ██ ██    ██ ██   ██ ██   ██ ██      ██   ██    ██    
+   ██       ██    ██       ██████   ██████  ██   ██ ██   ██ ██      ██   ██    ██ */
+   
 
 h1 {
   font-size: 2.75em;
@@ -498,9 +451,6 @@ a.phrase {
       "bio experience profile-img"
       "contact . .";
   }
-
-
-
 
   .logo,
   .about {
