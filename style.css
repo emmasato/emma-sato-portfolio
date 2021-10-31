@@ -60,6 +60,7 @@ h1 {
 
 h2 {
   font-size: 2em;
+  line-height: 1.3em;
   font-family: var(--main-heading);
 }
 
@@ -351,6 +352,7 @@ a.about-nav-elements:hover {
   flex-direction: row;
   position: sticky;
   bottom: 5vh;
+  justify-content: space-between;
 }
 
 .arrow {
@@ -362,6 +364,10 @@ a.about-nav-elements:hover {
 .project-details {
   width: 100%;
   padding: 1em;
+}
+
+.project-title {
+  margin-bottom: 1vh;
 }
 
 #tooltip {
