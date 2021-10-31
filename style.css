@@ -169,9 +169,17 @@ a.about-nav-elements:hover {
   align-self: center;
 }
 
+.catalogue {
+  grid-area: catalogue;
+  justify-self: end;
+  align-self: center;
+
+}
+
 .about {
   grid-area: about;
 }
+
 
 .copyright {
   grid-area: copyright;
@@ -188,16 +196,17 @@ a.about-nav-elements:hover {
 
 .main-nav {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 15vw 15vw;
   grid-template-rows: 5vh;
   padding: 0px 15px 0px 15px;
   column-gap: 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "logo about";
+    "logo catalogue about";
   position: sticky;
   top: 0;
   height: 5vh;
+  
 
 }
 
@@ -339,12 +348,13 @@ a.about-nav-elements:hover {
   flex-direction: column;  
   justify-content: space-between;
   background: white;
-  padding: 1em 1em 1em 0em;
+  padding: 0em 1em 1em 1em;
 }
 
 .project-aside {
   width: 100%;
-  padding: 1em;
+  margin-top: 5vh;
+  padding: 0em 1em 1em .5em;
 }
 
 .project-navigation {
@@ -361,13 +371,14 @@ a.about-nav-elements:hover {
   padding-left: 1em;
 }
 
-.project-details {
+.project-content {
   width: 100%;
-  padding: 1em;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .project-title {
-  margin-bottom: 1vh;
+  margin-bottom: 2vh;
 }
 
 #tooltip {
@@ -389,7 +400,22 @@ a.about-nav-elements:hover {
   background: --accent-color;
 }
 
-/* Mobile Grid Layout */
+/*                                                                         
+                ,--.    ,--.      ,---.                                 
+ ,---.  ,--.--. `--'  ,-|  |     |  o ,-.                               
+| .-. | |  .--' ,--. ' .-. |     .'     /_                              
+' '-' ' |  |    |  | \ `-' |     |  o  .__)                             
+.`-  /  `--'    `--'  `---'       `---'                                 
+`---'                                                                   
+                                                                        
+                  ,--.            ,--.                                  
+ ,---.  ,--,--. ,-'  '-.  ,--,--. |  |  ,---.   ,---.  ,--.,--.  ,---.  
+| .--' ' ,-.  | '-.  .-' ' ,-.  | |  | | .-. | | .-. | |  ||  | | .-. : 
+\ `--. \ '-'  |   |  |   \ '-'  | |  | ' '-' ' ' '-' ' '  ''  ' \   --. 
+ `---'  `--`--'   `--'    `--`--' `--'  `---'  .`-  /   `----'   `----' 
+                                               `---'                     */
+
+
 
 .container {
   display: grid;
@@ -417,6 +443,27 @@ a.about-nav-elements:hover {
     "nearby nearby nearby nearby . . . . .";
 }
 
+.catalogue-container {
+  display: grid;
+  object-fit: cover;
+  grid-template-columns: 20vw 10vw 1fr 1fr 1fr 1fr;
+  grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh;
+  padding-left: 1em;
+  padding-right: 1em;
+  grid-auto-flow: row;
+  border-bottom: .125em black;
+  grid-template-areas: 
+    ". . . world-kitchen . ."
+    ". . . . bite ."
+    ". . boddi . . ."
+    ". . . . . tavolo-lungo"
+    ". . . capstone . ."
+    ". . . . portrait ."
+    ". . when-will-this-place . . ."
+    ". . . . . nearby"
+    ;
+
+}
 
 
 /* Global and mobile styles for Project Page */
@@ -428,11 +475,6 @@ a.about-nav-elements:hover {
   align-items: center;
 
 }
-
-
-
-
-
 
 
 
@@ -556,18 +598,22 @@ a.about-nav-elements:hover {
   .project-wrapper {
     flex-direction: row;  
   }
+
   .project-aside {
     width: 40vw;
     height: 40vh;
     position: -webkit-sticky;
     position: sticky;
-    top: 5vh;
+    top: 10vh;
   }
   
   .project-details {
     width: 60vw;
   }
 
+  .project-content {
+    margin-top: 5vh;
+  }
 
 
 }
