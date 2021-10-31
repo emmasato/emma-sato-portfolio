@@ -18,6 +18,7 @@ html {
   --accent-color: rgb(255, 75, 30);
   --main-heading: 'liftedsans', sans-serif;
   --body-typeface: 'open_sauce_oneregular', sans-serif;
+  --main-heading-serif: 'liftedserif';
 }
 
 /* Global styles and mobile styles, styles for larger screesn are way down below */
@@ -48,10 +49,13 @@ img {
    
 
 h1 {
-  font-size: 2.75em;
+  font-size: 1.75em;
   font-family: var(--main-heading);
   line-height: 1.3em;
 }
+
+.bio-highlight {font-family: var(--main-heading-serif); line-height: 1.3; background: rgb(255,50,20)}
+
 
 h2 {
   font-size: 2em;
@@ -276,7 +280,6 @@ a.phrase {
 
 .project-details {
   width: 60vw;
-  min-height: 800vh;
   background: rgb(255, 255, 255);
   padding: 1em;
 }
@@ -331,7 +334,7 @@ a.phrase {
   color: white;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr .25fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   padding: 0px 15px 0px 15px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -352,6 +355,70 @@ a.phrase {
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+███    ███ ███████ ██████  ██  █████       ██████  ██    ██ ███████ ██████  ██ ███████ ███████ 
+████  ████ ██      ██   ██ ██ ██   ██     ██    ██ ██    ██ ██      ██   ██ ██ ██      ██      
+██ ████ ██ █████   ██   ██ ██ ███████     ██    ██ ██    ██ █████   ██████  ██ █████   ███████ 
+██  ██  ██ ██      ██   ██ ██ ██   ██     ██ ▄▄ ██ ██    ██ ██      ██   ██ ██ ██           ██ 
+██      ██ ███████ ██████  ██ ██   ██      ██████   ██████  ███████ ██   ██ ██ ███████ ███████ 
+                                              ▀▀                                               
+
+/*
+                                                                                               
+
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .main-footer {
@@ -367,7 +434,10 @@ a.phrase {
   body {
     background: rgb(253, 170, 212);
   }
-
+  h1 {
+    font-size: 2.125em;
+    line-height: 1.2;
+  }
   /* Tablet & Large Grid Layout */
   .container {
     display: grid;
@@ -443,13 +513,14 @@ a.phrase {
 
   .about-container {
     grid-template-columns: 2fr .75fr 1fr;
-    grid-template-rows: 50vh 15vh;
+    grid-template-rows: 1fr 1fr;
     padding: 0px 15px 0px 15px;
     column-gap: 2vw;
     grid-auto-flow: row;
     grid-template-areas:
       "bio experience profile-img"
       "contact . .";
+      
   }
 
   .logo,
