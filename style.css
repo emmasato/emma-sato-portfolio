@@ -243,8 +243,16 @@ a.contact-link:hover {
   color: white;
 }
 
-
-
+.project-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 0px 15px 0px 15px;
+  grid-auto-flow: row;
+  grid-template-areas: "copyright phrase";
+  height: 5vh;
+  background: rgba(0,0,0,0.2);
+}
 /* Hero */
 
 .hero {
@@ -451,6 +459,7 @@ a.contact-link:hover {
     bottom:0;
     left:0;
     right:0;
+    position: fixed;
   }
 
 }
