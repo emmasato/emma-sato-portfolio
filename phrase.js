@@ -37,7 +37,7 @@ function pickRandomName() {
   //Put the randomly chosen name in the DOM
   domHeaderName.innerHTML = nameArray[randomIndex];
   //loop
-  setTimeout(pickRandomName, 6000); //Loop every 2000ms (2s)
+  setTimeout(pickRandomName, 8000); //Loop every 2000ms (2s)
 }
 
 pickRandomName();
