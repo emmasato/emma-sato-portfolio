@@ -3,7 +3,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  height: 100%;
+  /* height: 100%; */
 }
 
 *,
@@ -249,6 +249,16 @@ a.about-nav-elements:hover {
   height: 5vh;
 }
 
+.project-footer {
+  display: grid;
+  grid-template-columns: 30vw 1fr;
+  grid-template-rows: 1fr;
+  padding: 0px 15px 0px 15px;
+  grid-auto-flow: row;
+  grid-template-areas: "copyright phrase";
+  height: 5vh;
+}
+
 .footer-project-page {
   color: white;
 
@@ -263,16 +273,8 @@ a.about-nav-elements:hover {
   color: white;
 }
 
-.project-footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  padding: 0px 15px 0px 15px;
-  grid-auto-flow: row;
-  grid-template-areas: "copyright phrase";
-  height: 5vh;
-  background: rgba(0,0,0,0.2);
-}
+
+
 /* Hero */
 
 .hero {
@@ -357,16 +359,16 @@ a.about-nav-elements:hover {
 }
 
 .project-aside {
-  width: 100%;
+  width: 80%;
   margin-top: 5vh;
-  padding: 0em 1em 1em .5em;
+  padding: 0em 2em 1em 0em;
 }
 
 .project-navigation {
   display: flex;
   flex-direction: row;
   position: sticky;
-  bottom: 5vh;
+  bottom: 1em;
   justify-content: space-between;
 }
 
@@ -377,9 +379,9 @@ a.about-nav-elements:hover {
 }
 
 .project-content {
-  width: 100%;
+  /* width: 100%; */
   flex-direction: column;
-  justify-content: flex-end;
+
 }
 
 .project-title {
@@ -391,13 +393,15 @@ a.about-nav-elements:hover {
   background: var(--accent-color);
   color: rgb(255, 255, 255);
   font-size: .85em;
+  line-height: 1.5em;
   padding: 1em;
-  width: 16rem;
-  height: 4rem;
+  width: 12em;
+  /* width: minmax(max-content, 5em); */
+  height: auto;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
 }
+
 
 /* Error Page 404 */
 
@@ -504,6 +508,17 @@ a.about-nav-elements:hover {
     right:0;
   }
 
+  .project-footer {
+    display: grid;
+    grid-template-columns: 30vw 1fr;
+    grid-template-rows: 1fr;
+    padding: 0px 15px 0px 15px;
+    grid-auto-flow: row;
+    grid-template-areas: "copyright phrase";
+    height: 5vh;
+  }
+
+
 }
 
 
@@ -512,7 +527,7 @@ a.about-nav-elements:hover {
 @media only screen and (min-width: 992px) {
 
   body {
-    background: hotpink;
+    background: white;
   }
 
   h1 {
@@ -560,13 +575,6 @@ a.about-nav-elements:hover {
       "contact . .";
   }
 
-  .footer {
-    position: absolute;
-    bottom:0;
-    left:0;
-    right:0;
-  }
-
 
   /* Project Page Styles on Large Screens */
 
@@ -598,7 +606,7 @@ a.about-nav-elements:hover {
 @media only screen and (min-width: 1200px) {
   body {
     background: rgb(255, 255, 255);
-    height: 100%;
+    /* height: 100%; */
 
   }
 
@@ -624,7 +632,6 @@ a.about-nav-elements:hover {
       "nearby nearby nearby . . . when-will-this-place when-will-this-place . . world-kitchen world-kitchen ."
       "nearby nearby nearby . . . . . . . . . .";
     max-height: 90vh;
-    background: rgb(253, 170, 212);
     overflow: hidden;
   }
 
@@ -644,12 +651,7 @@ a.about-nav-elements:hover {
       
   }
 
-  .footer {
-    position: absolute;
-    bottom:0;
-    left:0;
-    right:0;
-  }
+
 
   .logo,
   .about {
