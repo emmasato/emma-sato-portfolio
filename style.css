@@ -38,7 +38,7 @@ body {
 img {
   max-height: 100%;
   max-width: 100%;
-  object-fit: cover;
+  object-fit: scale-down;
 }
 
 /*
@@ -137,6 +137,7 @@ a.about-nav-elements:hover {
 
 .boddi {
   grid-area: boddi;
+
 }
 
 .portrait {
@@ -145,10 +146,12 @@ a.about-nav-elements:hover {
 
 .capstone {
   grid-area: capstone;
+
 }
 
 .tavolo-lungo {
   grid-area: tavolo-lungo;
+
 }
 
 .nearby {
@@ -167,13 +170,6 @@ a.about-nav-elements:hover {
   grid-area: logo;
   width: 9em;
   align-self: center;
-}
-
-.catalogue {
-  grid-area: catalogue;
-  justify-self: end;
-  align-self: center;
-
 }
 
 .about {
@@ -256,6 +252,15 @@ a.about-nav-elements:hover {
 .footer-project-page {
   color: white;
 
+}
+
+.footer-about-page {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  color: white;
 }
 
 .project-footer {
@@ -443,28 +448,6 @@ a.about-nav-elements:hover {
     "nearby nearby nearby nearby . . . . .";
 }
 
-.catalogue-container {
-  display: grid;
-  object-fit: cover;
-  grid-template-columns: 20vw 10vw 1fr 1fr 1fr 1fr;
-  grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh;
-  padding-left: 1em;
-  padding-right: 1em;
-  grid-auto-flow: row;
-  border-bottom: .125em black;
-  grid-template-areas: 
-    ". . . world-kitchen . ."
-    ". . . . bite ."
-    ". . boddi . . ."
-    ". . . . . tavolo-lungo"
-    ". . . capstone . ."
-    ". . . . portrait ."
-    ". . when-will-this-place . . ."
-    ". . . . . nearby"
-    ;
-
-}
-
 
 /* Global and mobile styles for Project Page */
 
@@ -513,14 +496,6 @@ a.about-nav-elements:hover {
       "profile-img experience";
   }
 
-  .footer-about-page {
-    position: absolute;
-    bottom:0;
-    left:0;
-    right:0;
-    position: fixed;
-    color: white;
-  }
 
   .footer {
     position: absolute;
@@ -630,8 +605,7 @@ a.about-nav-elements:hover {
   /* Extra Large Grid Layout */
   .container {
     display: grid;
-
-    grid-template-columns: 5vw 5vw 5vw 1fr 5vw 5vw 1fr 5vw 5vw 5vw 5vw 5vw 5vw;
+    grid-template-columns: 5vw 10vw 5vw .75fr 8vw 5vw .75fr .5fr 5vw .75fr 5vw .5fr 5vw;
     grid-template-rows: repeat(10, 9vh);
     grid-auto-columns: 1fr;
     padding-left: 15px;
@@ -643,9 +617,9 @@ a.about-nav-elements:hover {
       ". . . . bite bite . . . . . portrait portrait"
       ". boddi boddi . bite bite . . . . . portrait portrait"
       ". boddi boddi . . . . . . capstone . portrait portrait"
-      ". boddi boddi . . . . . . capstone . . ."
+      ". boddi boddi . . tavolo-lungo tavolo-lungo . . capstone . . ."
       ". . . . . tavolo-lungo tavolo-lungo . . capstone . . ."
-      ". . . . . tavolo-lungo tavolo-lungo . . . . . ."
+      ". . . . . . . . . . . . ."
       ". . . . . . . . . . world-kitchen world-kitchen ."
       "nearby nearby nearby . . . when-will-this-place when-will-this-place . . world-kitchen world-kitchen ."
       "nearby nearby nearby . . . . . . . . . .";
