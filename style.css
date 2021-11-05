@@ -59,7 +59,7 @@ h1 {
 
 
 h2 {
-  font-size: 2em;
+  font-size: 1.75em;
   line-height: 1.3em;
   font-family: var(--main-heading);
 }
@@ -73,6 +73,12 @@ h3 {
 h4 {
   font-size: 0.8em;
   font-family: open_sauce_onebold;
+}
+
+h5 {
+  font-size: 1.75em;
+  font-family: var(--body-typeface);
+  line-height: 1.3em;
 }
 
 p {
@@ -133,6 +139,9 @@ a.about-nav-elements:hover {
 /* Define grid areas once */
 .bite {
   grid-area: bite;
+  object-fit: contain;
+  width: 100%;
+  max-height: 100%;
 }
 
 .boddi {
@@ -359,7 +368,6 @@ a.about-nav-elements:hover {
 }
 
 .project-aside {
-  width: 80%;
   margin-top: 5vh;
   padding: 0em 2em 1em 0em;
 }
@@ -373,7 +381,7 @@ a.about-nav-elements:hover {
 }
 
 .arrow {
-  width: 4.25em;
+  width: 4.25rem;
   padding-right: 1em;
   padding-left: 1em;
 }
@@ -381,11 +389,14 @@ a.about-nav-elements:hover {
 .project-content {
   /* width: 100%; */
   flex-direction: column;
-
 }
 
-.project-title {
-  margin-bottom: 2vh;
+.project-section-heading {
+  margin-bottom: 1.2rem;
+}
+
+.project-description {
+  margin-bottom: 1.8rem;
 }
 
 #tooltip {
@@ -395,8 +406,9 @@ a.about-nav-elements:hover {
   font-size: .85em;
   line-height: 1.5em;
   padding: 1em;
-  width: 12em;
-  /* width: minmax(max-content, 5em); */
+  max-width: 9rem;
+  /* width: 12em; */
+  /* width: minmax(max-content, 4rem);  */
   height: auto;
   display: flex;
   align-items: left;
@@ -500,13 +512,6 @@ a.about-nav-elements:hover {
       "profile-img experience";
   }
 
-
-  .footer {
-    position: absolute;
-    bottom:0;
-    left:0;
-    right:0;
-  }
 
   .project-footer {
     display: grid;
