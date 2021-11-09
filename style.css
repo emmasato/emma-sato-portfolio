@@ -38,7 +38,7 @@ body {
 img {
   max-height: 100%;
   max-width: 100%;
-  object-fit: scale-down;
+  object-fit: contain;
 }
 
 /*
@@ -139,9 +139,6 @@ a.about-nav-elements:hover {
 /* Define grid areas once */
 .bite {
   grid-area: bite;
-  object-fit: contain;
-  width: 100%;
-  max-height: 100%;
 }
 
 .boddi {
@@ -369,7 +366,7 @@ a.about-nav-elements:hover {
 
 .project-aside {
   margin-top: 5vh;
-  padding: 0em 2em 1em 0em;
+  padding: 0em 2rem 1rem 0em;
 }
 
 .project-navigation {
@@ -387,7 +384,6 @@ a.about-nav-elements:hover {
 }
 
 .project-content {
-  /* width: 100%; */
   flex-direction: column;
 }
 
@@ -401,11 +397,12 @@ a.about-nav-elements:hover {
 
 #tooltip {
   position: absolute;
+  font-family: var(--main-heading);
   background: var(--accent-color);
   color: rgb(255, 255, 255);
-  font-size: .85em;
-  line-height: 1.5em;
-  padding: 1em;
+  font-size: .9rem;
+  line-height: 1.6em;
+  padding: .8rem;
   max-width: 9rem;
   /* width: 12em; */
   /* width: minmax(max-content, 4rem);  */
@@ -441,7 +438,7 @@ a.about-nav-elements:hover {
 .container {
   display: grid;
   grid-template-columns: 1.7fr 0.8fr 0.3fr 1.1fr 1.3fr 0.8fr 1.3fr 0.7fr 1fr;
-  grid-template-rows: 60px repeat(14, minmax(100px, auto));
+  grid-template-rows: 2rem repeat(12, minmax(1rem, auto));
   padding-left: 15px;
   padding-right: 15px;
   gap: 0px 0px;
@@ -450,16 +447,16 @@ a.about-nav-elements:hover {
     ". . . . . bite bite bite bite"
     "boddi boddi boddi . . bite bite bite bite"
     "boddi boddi boddi . . . . . ."
-    ". . . . . . . . ."
-    ". . . . . . . portrait portrait"
-    ". . . . . . . . ."
     ". capstone capstone capstone capstone . . . ."
-    ". . . . . . . . ."
-    "tavolo-lungo tavolo-lungo tavolo-lungo tavolo-lungo . . . . ."
-    "tavolo-lungo tavolo-lungo tavolo-lungo tavolo-lungo . world-kitchen world-kitchen world-kitchen world-kitchen"
+    ". capstone capstone capstone capstone . . . ."
+    ". capstone capstone capstone capstone . portrait portrait portrait"
+    ". . . . . . portrait portrait portrait"
+    "tavolo-lungo tavolo-lungo tavolo-lungo . . . . . ."
+    "tavolo-lungo tavolo-lungo tavolo-lungo . . . . . ."
+    ". . . . . world-kitchen world-kitchen world-kitchen world-kitchen"
     ". . . . . world-kitchen world-kitchen world-kitchen world-kitchen"
     ". . . . . . . . ."
-    ". . when-will-this-place when-will-this-place when-will-this-place when-will-this-place when-will-this-place when-will-this-place ."
+    ". . . when-will-this-place when-will-this-place when-will-this-place when-will-this-place when-will-this-place ."
     ". . . . . . . . ."
     "nearby nearby nearby nearby . . . . .";
 }
@@ -543,8 +540,11 @@ a.about-nav-elements:hover {
   /* Tablet & Large Grid Layout */
   .container {
     display: grid;
-    grid-template-columns: repeat(3, 5vw) minmax(0, 1fr) repeat(3, 5vw) 8vw minmax(0, 1fr) 8vw repeat(3, 5vw);
-    grid-template-rows: repeat(10, 9vh);
+    grid-template-columns: repeat(13, 9.2vw);
+    grid-template-rows: repeat(13, minmax(1rem, auto));
+    /* grid-template-columns: repeat(13, minmax(1rem, auto));
+    /* grid-template-columns: repeat(3, 5vw) minmax(0, 1fr) repeat(3, 5vw) 8vw minmax(0, 1fr) 8vw repeat(3, 5vw); */
+    /* grid-template-rows: repeat(14, 6.4vh); */ 
     grid-auto-columns: 1fr;
     padding-left: 15px;
     padding-right: 15px;
@@ -554,12 +554,16 @@ a.about-nav-elements:hover {
     grid-template-areas:
       ". . . . bite bite . . . . . . ."
       ". . . . bite bite . . . . . portrait portrait"
-      ". boddi boddi . bite bite . . . . . portrait portrait"
+      ". . . . . . . . . . . portrait portrait"
+      ". boddi boddi . . . . . . . . . ."
       ". boddi boddi . . . . . . capstone . portrait portrait"
       ". boddi boddi . . . . . . capstone . . ."
-      ". . . . . tavolo-lungo tavolo-lungo . . capstone . . ."
+      ". . . . . . . . . capstone . . ."
       ". . . . . tavolo-lungo tavolo-lungo . . . . . ."
+      ". . . . . tavolo-lungo tavolo-lungo . . . . . ."
+      ". . . . . . . . . . . . ."
       ". . . . . . . . . . world-kitchen world-kitchen ."
+      ". . . . . . . . . . . . ."
       "nearby nearby nearby . . . when-will-this-place when-will-this-place . . world-kitchen world-kitchen ."
       "nearby nearby nearby . . . . . . . . . .";
     max-height: 100%;
@@ -593,6 +597,7 @@ a.about-nav-elements:hover {
     position: -webkit-sticky;
     position: sticky;
     top: 10vh;
+    padding: 0em 8rem 1rem 0em;
   }
   
   .project-details {
@@ -601,6 +606,7 @@ a.about-nav-elements:hover {
 
   .project-content {
     margin-top: 5vh;
+    width: 70%;
   }
 
 
