@@ -127,7 +127,7 @@ a.about-nav-elements:hover {
 /* main nav rule styles */
 
 hr.navblack {
-  height: 1.5px;
+  height: .1rem;
   margin-left: 1em;
   margin-right: 1em;
   margin-top: 0;
@@ -140,7 +140,7 @@ hr.navblack {
 }
 
 hr.navwhite {
-  height: 1.5px;
+  height: .1rem;
   margin-left: 1em;
   margin-right: 1em;
   margin-top: 0;
@@ -155,7 +155,7 @@ hr.navwhite {
 /* footer rule styles */
 
 hr.footerblack {
-  height: 1.5px;
+  height: .1rem;
   margin-left: 1em;
   margin-right: 1em;
   margin-top: 0;
@@ -167,7 +167,7 @@ hr.footerblack {
 }
 
 hr.footerwhite {
-  height: 1.5px;
+  height: .1rem;
   margin-left: 1em;
   margin-right: 1em;
   margin-top: 0;
@@ -236,7 +236,7 @@ hr.footerwhite {
 
 .logo {
   grid-area: logo;
-  width: 9.5em;
+  width: 10em;
   align-self: center;
 }
 
@@ -521,6 +521,12 @@ hr.footerwhite {
     "nearby nearby nearby nearby . . . . .";
 }
 
+.container-gridlines {
+  border-bottom: 1.5px solid black;
+  border-right: 1.5px solid black;
+  border-left: 1.5px solid black;
+  border-top: 1.5px solid black;
+}
 
 /* Global and mobile styles for Project Page */
 
