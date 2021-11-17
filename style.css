@@ -122,6 +122,66 @@ a.about-nav-elements:hover {
   color: black;
 }
 
+
+
+/* main nav rule styles */
+
+hr.navblack {
+  height: 1.5px;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: sticky;
+  top: 4.5vh;
+  border: 0;
+  display: block;
+  background: black;
+}
+
+hr.navwhite {
+  height: 1.5px;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: sticky;
+  top: 4.5vh;
+  border: 0;
+  display: block;
+  background: white;
+}
+
+/* footer rule styles */
+
+hr.footerblack {
+  height: 1.5px;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 0;
+  display: block;
+  background: black;
+
+}
+
+hr.footerwhite {
+  height: 1.5px;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 0;
+  display: block;
+  background: white;
+}
+
+
+
+
+
+
 /* Work Page Layout */
 
 .portfolio {
@@ -137,8 +197,8 @@ a.about-nav-elements:hover {
 }
 
 /* Define grid areas once */
-.bite {
-  grid-area: bite;
+.illustrations {
+  grid-area: illustrations;
 }
 
 .boddi {
@@ -146,8 +206,8 @@ a.about-nav-elements:hover {
 
 }
 
-.portrait {
-  grid-area: portrait;
+.paintings {
+  grid-area: paintings;
 }
 
 .capstone {
@@ -176,7 +236,7 @@ a.about-nav-elements:hover {
 
 .logo {
   grid-area: logo;
-  width: 10em;
+  width: 9.5em;
   align-self: center;
 }
 
@@ -210,9 +270,15 @@ a.about-nav-elements:hover {
   position: sticky;
   top: 0;
   height: 5vh;
-  
+
 
 }
+
+/* .main-nav-border-box {
+  border-bottom: .1rem solid;
+  position: relative;
+  width: 90vw;
+} */
 
 
 /* Hero Styles */
@@ -223,19 +289,7 @@ a.about-nav-elements:hover {
 |  `-, | .-. | | .-. | '-.  .-' | .-. : |  .--' 
 |  .-' ' '-' ' ' '-' '   |  |   \   --. |  |    
 `--'    `---'   `---'    `--'    `----' `--' */
-                                            
-
-/* .hero-footer {
-  color: white;
-} */
-
-/* .hero-footer {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 1rem;
-  text-align: center;
-} */
+                                          
 
 .nav-about {
   grid-area: about;
@@ -273,11 +327,9 @@ a.about-nav-elements:hover {
 }
 
 .footer-about-page {
-  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  position: fixed;
   color: white;
 }
 
@@ -302,7 +354,7 @@ a.about-nav-elements:hover {
 
 .about-page {
   background-color: var(--accent-color);
-  max-height: 150vh;
+  /* max-height: 150vh; */
 }
 
 .about-nav-elements {
@@ -315,7 +367,7 @@ a.about-nav-elements:hover {
   color: white;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: max-content max-content max-content min-content;
   padding: 0px 15px 0px 15px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -327,12 +379,14 @@ a.about-nav-elements:hover {
 
 .bio {
   grid-area: bio;
+  padding-bottom: 2rem;
   margin-top: 5vh;
 }
 
 .contact {
   grid-area: contact;
   align-self: end;
+  padding-bottom: 1rem;
 }
 
 .contact-link {
@@ -346,8 +400,8 @@ a.about-nav-elements:hover {
 
 .profile-img {
   grid-area: profile-img;
-  margin-top: 5vh;
   justify-self: end;
+  padding-bottom: 1rem;
 }
 
 /*                                               
@@ -364,6 +418,12 @@ a.about-nav-elements:hover {
   flex-direction: column;  
   justify-content: space-between;
   background: white;
+  padding: 0em 1em 1em 1em;
+}
+
+.project-image-container {
+  display: flex;
+  flex-direction: column;
   padding: 0em 1em 1em 1em;
 }
 
@@ -441,24 +501,23 @@ a.about-nav-elements:hover {
 .container {
   display: grid;
   grid-template-columns: 1.7fr 0.8fr 0.3fr 1.1fr 1.3fr 0.8fr 1.3fr 0.7fr 1fr;
-  grid-template-rows: 2rem repeat(11, minmax(1rem, auto));
+  grid-template-rows: 2rem repeat(10, minmax(1rem, auto));
   padding-left: 15px;
   padding-right: 15px;
   gap: 1rem 1rem;
   grid-auto-flow: row;
   grid-template-areas:
-    ". . . . . bite bite bite bite"
-    "boddi boddi boddi . . bite bite bite bite"
-    "boddi boddi boddi . . . . . ."
+    ". . . . . illustrations illustrations illustrations illustrations"
+    "boddi boddi boddi . . illustrations illustrations illustrations illustrations"
     "capstone capstone capstone capstone capstone . . . ."
     "capstone capstone capstone capstone capstone . . . ."
-    "capstone capstone capstone capstone capstone . portrait portrait portrait"
-    ". . . . . . portrait portrait portrait"
+    "capstone capstone capstone capstone capstone . . . ."
+    ". . . . . . paintings paintings paintings"
+    "tavolo-lungo tavolo-lungo tavolo-lungo . . . paintings paintings paintings"
     "tavolo-lungo tavolo-lungo tavolo-lungo . . . . . ."
-    "tavolo-lungo tavolo-lungo tavolo-lungo . . world-kitchen world-kitchen world-kitchen world-kitchen"
-    ". . . . . world-kitchen world-kitchen world-kitchen world-kitchen"
-    ". . . . . world-kitchen world-kitchen world-kitchen world-kitchen"
-    ". . . when-will-this-place when-will-this-place when-will-this-place when-will-this-place when-will-this-place ."
+    ". . world-kitchen world-kitchen world-kitchen world-kitchen . . ."
+    ". . world-kitchen world-kitchen world-kitchen world-kitchen . . ."
+    ". . . . when-will-this-place when-will-this-place when-will-this-place when-will-this-place when-will-this-place"
     "nearby nearby nearby nearby . . . . .";
 }
 
@@ -549,10 +608,10 @@ a.about-nav-elements:hover {
     gap: 1rem 1rem;
     grid-auto-flow: row;
     grid-template-areas:
-      ". . . bite bite . . . . . . . ."
-      "boddi boddi . bite bite . . . . . . portrait portrait"
-      "boddi boddi . . . . . . capstone capstone . portrait portrait"
-      ". . . . . . tavolo-lungo tavolo-lungo capstone capstone . portrait portrait"
+      ". . .  illustrations illustrations . . . . . . . ."
+      "boddi boddi . illustrations illustrations . . . . . . paintings paintings"
+      "boddi boddi . . . . . . capstone capstone . paintings paintings"
+      ". . . . . . tavolo-lungo tavolo-lungo capstone capstone . paintings paintings"
       ". . . . . . tavolo-lungo tavolo-lungo . . . . ."
       ". . . . . . . . . . . . ."
       "nearby nearby . . . . . . . . world-kitchen world-kitchen ."
@@ -561,6 +620,7 @@ a.about-nav-elements:hover {
       ". . . . when-will-this-place when-will-this-place . . . . world-kitchen world-kitchen .";
     max-height: 90vh;
     overflow: hidden;
+    overscroll-behavior: none;
   }
 
   .about-page {
@@ -569,13 +629,17 @@ a.about-nav-elements:hover {
 
   .about-container {
     grid-template-columns: minmax(550px, 800px) 150px minmax(200px, max-content);
-    grid-template-rows: 80vh 10vh;
-    padding: 0px 15px 0px 15px;
+    grid-template-rows: 70vh 20vh;
+    padding: 0em 1em 0em 1em;
     column-gap: 5rem;
     grid-auto-flow: row;
     grid-template-areas:
       "bio experience profile-img"
       "contact . .";
+  }
+
+  .profile-img {
+    margin-top: 5vh;
   }
 
 
@@ -600,7 +664,7 @@ a.about-nav-elements:hover {
 
   .project-content {
     margin-top: 5vh;
-    width: 70%;
+    width: 50%;
   }
 
 
