@@ -63,6 +63,7 @@ h2 {
   font-family: var(--main-heading);
 }
 
+
 h3 {
   font-size: .9em;
   font-family: open_sauce_onebold;
@@ -88,9 +89,6 @@ p {
   letter-spacing: .4px;
 }
 
-.project-title {
-  margin-bottom: 1.5rem;
-}
 
 /* 
                                                                           
@@ -116,6 +114,7 @@ a {
 a.phrase {
   text-decoration: underline;
 }
+
 
 a.contact-link:hover {
   color: black;
@@ -258,6 +257,7 @@ hr.footerwhite {
   align-self: center;
 }
 
+
 /* Defining main nav once */
 
 .main-nav {
@@ -336,7 +336,6 @@ hr.footerwhite {
 }
 
 
-
 /* Hero */
 
 .hero {
@@ -404,6 +403,13 @@ hr.footerwhite {
   grid-area: profile-img;
   justify-self: end;
   padding-bottom: 1rem;
+}
+
+
+.error-container {
+  display: flex;
+  justify-content: center;
+  height: 88vh;
 }
 
 /*                                               

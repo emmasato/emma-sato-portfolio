@@ -8,12 +8,19 @@
 var nameArray = [
   "<a class='phrase' href='https://poets.org/poem/revolutionary-letter-2'>looking for answers.</a>",
   "<a class='phrase' href='#'>on the run.</a>",
-  "<a class='phrase' href='https://www.youtube.com/watch?v=ZFq_Ib8BkVI'>wondering where all the time has gone.</a>",
-  "<a class='phrase' href='#'>packing up her soapbox.</a>.",
-  "<a class='phrase' href='#'>having her cake and eating it, too.</a>",
+  "<a class='phrase' href='https://www.youtube.com/watch?v=ZFq_Ib8BkVI'>wondering where the time has gone.</a>",
+  "<a class='phrase' href='#'>packing up her soapbox.</a>",
+  "<a class='phrase' href='#'>having her cake and eating it.</a>",
   "<a class='phrase' href='#'>commiting a faux paus.</a>",
   "<a class='phrase' href='#'>engaging serendipity.</a>",
-  "<a class='phrase' href='#'>guessing, and getting it right.</a>"
+  "<a class='phrase' href='#'>guessing, and getting it right.</a>",
+  "<a class='phrase' href='#'>preaching to the choir.</a>",
+  "<a class='phrase' href='#'>keeping tabs.</a>",
+  "<a class='phrase' href='#'>believing the best.</a>",
+  "<a class='phrase' href='#'>taking drastic measures.</a>",
+  "<a class='phrase' href='#'>trusting her gut.</a>",
+  "<a class='phrase' href='#'>catching non sequiturs.</a>",
+  
 ]; //One of those will be randomly chosen
 
 
