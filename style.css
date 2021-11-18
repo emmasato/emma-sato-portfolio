@@ -38,7 +38,6 @@ body {
 img {
   max-height: 100%;
   max-width: 100%;
-  object-fit: cover;
 }
 
 /*
@@ -158,12 +157,11 @@ hr.footerblack {
   height: .1rem;
   margin-left: 1em;
   margin-right: 1em;
-  margin-top: 0;
+  margin-top: .5rem;
   margin-bottom: 0;
   border: 0;
   display: block;
   background: black;
-
 }
 
 hr.footerwhite {
@@ -413,9 +411,13 @@ hr.footerwhite {
 `--'                    '---'                          
 */
 
+.project-container-noscroll {
+  display: flex;
+}
+
 .project-wrapper {
   display: flex;
-  flex-direction: column;  
+  flex-direction: row;  
   justify-content: space-between;
   background: white;
   padding: 0em 1em 1em 1em;
@@ -436,7 +438,7 @@ hr.footerwhite {
   display: flex;
   flex-direction: row;
   position: sticky;
-  bottom: 1em;
+  bottom: .75em;
   justify-content: space-between;
 }
 
@@ -563,7 +565,7 @@ hr.footerwhite {
     overflow: hidden;
   }
 
-  .about-container {
+  /* .about-container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 35vh 5vh 50vh;
     padding: 0px 15px 0px 15px;
@@ -573,7 +575,7 @@ hr.footerwhite {
       "bio bio"
       "contact ."
       "profile-img experience";
-  }
+  } */
 
 
   .project-footer {
@@ -585,7 +587,6 @@ hr.footerwhite {
     grid-template-areas: "copyright phrase";
     height: 5vh;
   }
-
 
 }
 
@@ -624,7 +625,7 @@ hr.footerwhite {
       "nearby nearby . . when-will-this-place when-will-this-place . . . . world-kitchen world-kitchen ."
       "nearby nearby . . when-will-this-place when-will-this-place . . . . world-kitchen world-kitchen ."
       ". . . . when-will-this-place when-will-this-place . . . . world-kitchen world-kitchen .";
-    max-height: 90vh;
+    max-height: 89vh;
     overflow: hidden;
     overscroll-behavior: none;
   }
@@ -651,8 +652,15 @@ hr.footerwhite {
 
   /* Project Page Styles on Large Screens */
 
-  .project-wrapper {
-    flex-direction: row;  
+  
+
+  .project-container-noscroll {
+    height: 84vh;
+  }
+
+  .project-content-noscroll {
+    width: 80%;
+    justify-content: flex-end;
   }
 
   .project-aside {
