@@ -590,7 +590,7 @@ hr.footerwhite {
   } */
 
 
-  .project-footer {
+  /* .project-footer {
     display: grid;
     grid-template-columns: 30vw 1fr;
     grid-template-rows: 1fr;
@@ -598,7 +598,7 @@ hr.footerwhite {
     grid-auto-flow: row;
     grid-template-areas: "copyright phrase";
     height: 5vh;
-  }
+  } */
 
 }
 
