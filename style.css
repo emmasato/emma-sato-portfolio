@@ -52,6 +52,7 @@ h1 {
   font-size: 1.75em;
   font-family: var(--main-heading);
   line-height: 1.3em;
+  color: purple;
 }
 
 .bio-highlight {font-family: var(--main-heading-serif); line-height: 1.3;}
@@ -567,9 +568,14 @@ hr.footerwhite {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 
-  .about-page {
-    overflow: hidden;
+
+  h1 {
+
+    color: yellow;
   }
+  /* .about-page {
+    overflow: hidden;
+  } */
 
   /* .about-container {
     grid-template-columns: 1fr 1fr;
@@ -609,6 +615,7 @@ hr.footerwhite {
     font-size: 2.5em;
     line-height: 1.3;
     letter-spacing: -.5px;
+    color: green;
   }
   /* Tablet & Large Grid Layout */
   .container {
