@@ -76,9 +76,8 @@ h4 {
 }
 
 h5 {
-  font-size: 1.75em;
-  font-family: var(--body-typeface);
-  line-height: 1.3em;
+  font-size: .8em;
+  font-family: open_sauce_onebold;
 }
 
 p {
@@ -617,6 +616,9 @@ hr.footerwhite {
     font-size: 1em;
   }
   
+  h5 {
+    font-size: 1em;
+  }
   
   p {
     font-size: 1em;
