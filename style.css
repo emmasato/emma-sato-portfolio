@@ -610,21 +610,17 @@ hr.footerwhite {
     line-height: 1.3;
     letter-spacing: -.5px;
   }
-
-  h4 {
-    font-size: 1em;
-  }
   
   h5 {
     font-size: 1em;
   }
   
-  p {
+  /* p {
     font-size: 1em;
     line-height: 1.5em;
     margin-bottom: 1.5em;
     letter-spacing: .4px;
-  }
+  } */
 
 
   /* Tablet & Large Grid Layout */
@@ -658,7 +654,8 @@ hr.footerwhite {
   }
 
   .about-container {
-    grid-template-columns: minmax(550px, 800px) max-content minmax(200px, max-content);
+    grid-template-columns: minmax(550px, 800px) minmax(max-content, 1fr) minmax(100px, max-content);
+    width: 100vw;
     grid-template-rows: 70vh 20vh;
     padding: 0em 1em 0em 1em;
     column-gap: 5rem;
