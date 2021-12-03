@@ -397,7 +397,6 @@ hr.footerwhite {
 
 .profile-img {
   grid-area: profile-img;
-  justify-self: end;
   padding-bottom: 1rem;
 }
 
@@ -671,6 +670,7 @@ hr.footerwhite {
 
   .profile-img {
     margin-top: 5vh;
+    justify-self: end;
   }
 
 
