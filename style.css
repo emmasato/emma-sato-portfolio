@@ -134,7 +134,7 @@ hr.navblack {
   margin-top: 0;
   margin-bottom: 0;
   position: sticky;
-  top: 4.5vh;
+  top: 5vh;
   border: 0;
   display: block;
   background: black;
@@ -147,7 +147,7 @@ hr.navwhite {
   margin-top: 0;
   margin-bottom: 0;
   position: sticky;
-  top: 4.5vh;
+  top: 5vh;
   border: 0;
   display: block;
   background: white;
@@ -268,7 +268,7 @@ hr.footerwhite {
   position: sticky;
   top: 0;
   height: 5vh;
-
+  background-color: white;
 
 }
 
