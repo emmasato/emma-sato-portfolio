@@ -418,7 +418,7 @@ hr.footerwhite {
 
 .project-wrapper {
   display: flex;
-  flex-direction: row;  
+  flex-direction: column;  
   justify-content: space-between;
   background: white;
   padding: 0em 1em 1em 1em;
@@ -673,7 +673,9 @@ hr.footerwhite {
 
   /* Project Page Styles on Large Screens */
 
-  
+  .project-wrapper {
+    flex-direction: row;
+  }
 
   .project-container-noscroll {
     height: 84vh;
