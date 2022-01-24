@@ -88,6 +88,9 @@ p {
   letter-spacing: .4px;
 }
 
+.emphasized {
+  font-style: italic;
+}
 
 /* 
                                                                           
@@ -469,6 +472,14 @@ hr.footerwhite {
 .project-description {
   margin-bottom: 1.8rem;
 }
+
+.project-deets {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+
+
 
 #tooltip {
   position: absolute;
