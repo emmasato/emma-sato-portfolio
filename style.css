@@ -269,14 +269,23 @@ hr.footerwhite {
   top: 0;
   height: 5vh;
   background-color: white;
-
 }
 
-/* .main-nav-border-box {
-  border-bottom: .1rem solid;
-  position: relative;
-  width: 90vw;
-} */
+.main-nav-about {
+  display: grid;
+  grid-template-columns: 1fr 15vw 15vw;
+  grid-template-rows: 5vh;
+  padding: 0px 15px 0px 15px;
+  column-gap: 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo catalogue about";
+  position: sticky;
+  top: 0;
+  height: 5vh;
+  background-color: var(--accent-color);
+}
+
 
 
 /* Hero Styles */
