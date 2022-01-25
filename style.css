@@ -724,6 +724,9 @@ hr.footerwhite {
     width: 50%;
   }
 
+  .project-deets {
+    gap: 4em;
+  }
 
 }
 
