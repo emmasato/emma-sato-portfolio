@@ -479,6 +479,9 @@ hr.footerwhite {
   gap: 2em;
 }
 
+/* .project-no-overscroll {
+  overscroll-behavior: none;
+} */
 
 
 #tooltip {
