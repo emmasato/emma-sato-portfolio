@@ -467,6 +467,11 @@ hr.footerwhite {
   flex-direction: column;
 }
 
+.project-content-column {
+  flex-direction: column;
+  max-width: 50%;
+}
+
 .project-section-heading {
   margin-bottom: 1.2rem;
 }
@@ -481,26 +486,6 @@ hr.footerwhite {
   gap: 2em;
 }
 
-/* .project-no-overscroll {
-  overscroll-behavior: none;
-} */
-
-
-#tooltip {
-  position: absolute;
-  font-family: var(--main-heading);
-  background: var(--accent-color);
-  color: rgb(255, 255, 255);
-  font-size: .9rem;
-  line-height: 1.6em;
-  padding: .8rem;
-  max-width: 9rem;
-  /* width: 12em; */
-  /* width: minmax(max-content, 4rem);  */
-  height: auto;
-  display: flex;
-  align-items: left;
-}
 
 
 /* Error Page 404 */
@@ -590,6 +575,21 @@ hr.footerwhite {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+
+
+#tooltip {
+  position: absolute;
+  font-family: var(--main-heading);
+  background: var(--accent-color);
+  color: rgb(255, 255, 255);
+  font-size: .9rem;
+  line-height: 1.6em;
+  padding: .8rem;
+  max-width: 9rem;
+  height: auto;
+  display: flex;
+  align-items: left;
+}
 
 
   /* .about-page {
