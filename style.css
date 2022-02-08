@@ -484,7 +484,6 @@ hr.footerwhite {
   display: flex;
   flex-direction: row;
   gap: 2em;
-  max-width: max-content;
 }
 
 
