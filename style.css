@@ -127,6 +127,12 @@ a.about-nav-elements:hover {
   color: black;
 }
 
+a.about {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: .1em;
+}
+
 
 
 /* main nav rule styles */
