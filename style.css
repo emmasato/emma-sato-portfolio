@@ -133,6 +133,14 @@ a.about {
   text-underline-offset: .1em;
 }
 
+a.about:hover {
+  color: black;
+}
+
+a.main-nav-about-button:hover {
+  color: --accent-color;
+}
+
 
 
 /* main nav rule styles */
