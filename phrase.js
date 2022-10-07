@@ -19,6 +19,7 @@ var nameArray = [
   "<a class='phrase' target='_blank' href='https://pointerpointer.com/' target='_blank'>taking drastic measures.</a>",
   // "<a class='phrase' href=''>trusting her gut.</a>",
   "<a class='phrase' href='https://www.merriam-webster.com/dictionary/non%20sequitur' target='_blank'>catching non sequiturs.</a>",
+  "<a class='phrase' target='_blank' href='https://vienna.earth/plate/~latwyx-mopmep/september%202022' target='_blank'>off the grid.</a>"
 
 ]; //One of those will be randomly chosen
 
