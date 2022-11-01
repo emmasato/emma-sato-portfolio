@@ -220,7 +220,6 @@ hr.footerwhite {
 
 .boddi {
   grid-area: boddi;
-
 }
 
 .paintings {
@@ -273,6 +272,59 @@ hr.footerwhite {
   align-self: center;
 }
 
+/* painting page grid areas */
+
+.grand-city {
+  grid-area: grand-city;
+}
+
+.two-five-four {
+  grid-area: two-five-four;
+}
+
+.two-flowers {
+  grid-area: two-flowers;
+}
+
+.august {
+  grid-area: august;
+}
+
+.blue-girl {
+  grid-area: blue-girl;
+}
+
+.blue-boy {
+  grid-area: blue-boy;
+}
+
+.coco {
+  grid-area: coco;
+}
+
+.jericho {
+  grid-area: jericho;
+}
+
+.laying {
+  grid-area: laying;
+}
+
+.loft {
+  grid-area: loft;
+}
+
+.self-portrait {
+  grid-area: self-portrait;
+}
+
+.swimmers {
+  grid-area: swimmers;
+}
+
+.the-last-time {
+  grid-area: the-last-time;
+}
 
 /* Defining main nav once */
 
@@ -407,6 +459,9 @@ hr.footerwhite {
   background: black;
   padding: 0em 1em 1em 1em;
 }
+
+
+
 
 
 /*                                            
@@ -591,6 +646,22 @@ hr.footerwhite {
     "nearby nearby nearby nearby . . . . .";
 }
 
+
+.painting-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding-left: 15px;
+  padding-right: 15px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "self-portrait swimmers august the-last-time"
+    "blue-girl two-flowers blue-boy laying coco"
+    "loft when-will-this-place . grand-city jericho";
+  gap: 1em;
+
+}
+
 /* .container-box-corner {
   height: .1rem;
   border: 0;
@@ -614,6 +685,7 @@ hr.footerwhite {
   align-items: center;
 
 }
+
 
 
 /*
