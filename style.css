@@ -650,13 +650,13 @@ hr.footerwhite {
 .painting-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr fr;
-  grid-template-rows: 20vh 20vh 20vh;
+  grid-template-rows: 18vh 18vh 18vh;
   padding: 4em;
   grid-auto-flow: row;
   grid-template-areas:
     "self-portrait swimmers august two-five-four the-last-time"
     "blue-girl two-flowers blue-boy laying coco"
-    "loft when-will-this-place when-will-this-place grand-city jericho";
+    "loft when-will-this-place . grand-city jericho";
   gap: 8rem;
 
 }
