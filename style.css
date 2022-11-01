@@ -304,6 +304,21 @@ hr.footerwhite {
   background-color: var(--accent-color);
 }
 
+.main-nav-paintings {
+  display: grid;
+  grid-template-columns: 1fr 15vw 15vw;
+  grid-template-rows: 5vh;
+  padding: 0px 15px 0px 15px;
+  column-gap: 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo catalogue about";
+  position: sticky;
+  top: 0;
+  height: 5vh;
+  background-color: black;
+}
+
 
 
 /* Hero Styles */
@@ -367,6 +382,23 @@ hr.footerwhite {
   flex-direction: column;
   background-size: 600%;
 }
+
+
+/* 
+            _       _   _                                      
+  _ __   __ _(_)_ __ | |_(_)_ __   __ _   _ __   __ _  __ _  ___ 
+ | '_ \ / _` | | '_ \| __| | '_ \ / _` | | '_ \ / _` |/ _` |/ _ \
+ | |_) | (_| | | | | | |_| | | | | (_| | | |_) | (_| | (_| |  __/
+ | .__/ \__,_|_|_| |_|\__|_|_| |_|\__, | | .__/ \__,_|\__, |\___|
+ |_|                              |___/  |_|          |___/      
+
+*/
+
+.painting-page {
+  background-color: black;
+  /* max-height: 150vh; */
+}
+
 
 /*                                            
          ,--.                       ,--.   
@@ -574,7 +606,6 @@ hr.footerwhite {
   align-items: center;
 
 }
-
 
 
 /*
