@@ -656,7 +656,7 @@ hr.footerwhite {
   grid-template-areas:
     "self-portrait swimmers august two-five-four the-last-time"
     "blue-girl two-flowers blue-boy laying coco"
-    "loft when-will-this-place . grand-city jericho";
+    "loft when-will-this-place when-will-this-place grand-city jericho";
   gap: 8rem;
 
 }
