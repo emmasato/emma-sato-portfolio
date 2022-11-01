@@ -127,10 +127,6 @@ a.about-nav-elements:hover {
   color: black;
 }
 
-a.painting-nav-elements:hover {
-  color: var(--accent-color);
-}
-
 a.about {
   color: white;
   text-decoration: underline;
@@ -144,7 +140,6 @@ a.about:hover {
 a.main-nav-about-button:hover {
   color: --accent-color;
 }
-
 
 
 
@@ -401,6 +396,7 @@ hr.footerwhite {
 
 .painting-page {
   background-color: black;
+  /* max-height: 150vh; */
 }
 
 .project-wrapper-painting {
@@ -594,19 +590,19 @@ hr.footerwhite {
     "nearby nearby nearby nearby . . . . .";
 }
 
-/* .container-box-corner {
+.container-box-corner {
   height: .1rem;
   border: 0;
   display: block;
   background: black;
-} */
+}
 
-/* .container-gridlines {
+.container-gridlines {
   border-bottom: 1.5px solid black;
   border-right: 1.5px solid black;
   border-left: 1.5px solid black;
   border-top: 1.5px solid black;
-} */
+}
 
 /* Global and mobile styles for Project Page */
 
