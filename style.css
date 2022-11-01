@@ -732,33 +732,15 @@ hr.footerwhite {
   align-items: left;
 }
 
-
-  /* .about-page {
-    overflow: hidden;
-  } */
-
-  /* .about-container {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 35vh 5vh 50vh;
-    padding: 0px 15px 0px 15px;
-    column-gap: 2vw;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "bio bio"
-      "contact ."
-      "profile-img experience";
-  } */
-
-
-  /* .project-footer {
-    display: grid;
-    grid-template-columns: 30vw 1fr;
-    grid-template-rows: 1fr;
-    padding: 0px 15px 0px 15px;
-    grid-auto-flow: row;
-    grid-template-areas: "copyright phrase";
-    height: 5vh;
-  } */
+.painting-container {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "self-portrait swimmers august two-five-four"
+    "the-last-time blue-girl two-flowers blue-boy"
+    "laying coco loft when-will-this-place"
+    "grand-city . jericho .";
+}
 
 }
 
