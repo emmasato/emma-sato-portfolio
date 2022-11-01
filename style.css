@@ -399,6 +399,14 @@ hr.footerwhite {
   /* max-height: 150vh; */
 }
 
+.project-wrapper-painting {
+  display: flex;
+  flex-direction: column;  
+  justify-content: space-between;
+  background: black;
+  padding: 0em 1em 1em 1em;
+}
+
 
 /*                                            
          ,--.                       ,--.   
@@ -482,7 +490,6 @@ hr.footerwhite {
   background: white;
   padding: 0em 1em 1em 1em;
 }
-
 
 
 .project-image-container {
