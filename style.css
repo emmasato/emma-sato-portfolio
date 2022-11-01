@@ -15,8 +15,7 @@ html {
 
 /* Styling Variables */
 :root {
-  --accent-color: hotpink;
-  /* --accent-color: rgb(255, 75, 30); */
+  --accent-color: rgb(255, 75, 30);
   --main-heading: 'liftedsans', sans-serif;
   --body-typeface: 'open_sauce_oneregular', sans-serif;
   --main-heading-serif: 'liftedserif';
