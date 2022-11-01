@@ -657,17 +657,23 @@ hr.footerwhite {
 
 .painting-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr fr;
-  grid-template-rows: 18vh 18vh 18vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   padding: 4em;
   grid-auto-flow: row;
   grid-template-areas:
-    "self-portrait swimmers august two-five-four the-last-time"
-    "blue-girl two-flowers blue-boy laying coco"
-    "loft when-will-this-place . grand-city jericho";
+    "self-portrait swimmers"
+    "august two-five-four"
+    "the-last-time blue-girl"
+    "two-flowers blue-boy"
+    "laying coco"
+    "loft when-will-this-place"
+    "grand-city jericho";
   gap: 8rem;
-
 }
+
+
+
 
 /* .container-box-corner {
   height: .1rem;
@@ -871,6 +877,22 @@ hr.footerwhite {
 
   .project-deets {
     gap: 3em;
+  }
+
+
+  /* Painting Page Grid */
+
+  .painting-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr fr;
+    grid-template-rows: 18vh 18vh 18vh;
+    padding: 4em;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "self-portrait swimmers august two-five-four the-last-time"
+      "blue-girl two-flowers blue-boy laying coco"
+      "loft when-will-this-place . grand-city jericho";
+    gap: 8rem;
   }
 
 }
