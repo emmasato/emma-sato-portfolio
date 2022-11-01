@@ -288,6 +288,9 @@ hr.footerwhite {
 
 .august {
   grid-area: august;
+  align-self: center;
+  justify-self: center;
+  max-height: 10em;
 }
 
 .blue-girl {
