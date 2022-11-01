@@ -659,7 +659,7 @@ hr.footerwhite {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  padding: 4em;
+  padding: 2em;
   grid-auto-flow: row;
   grid-template-areas:
     "self-portrait swimmers"
@@ -741,6 +741,7 @@ hr.footerwhite {
     "laying coco loft when-will-this-place"
     "grand-city . jericho .";
   gap: 6rem;
+  padding: 4em;
 }
 
 }
