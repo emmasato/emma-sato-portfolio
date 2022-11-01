@@ -882,7 +882,7 @@ hr.footerwhite {
 
   /* Painting Page Grid */
   .painting-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1r;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 18vh 18vh 18vh;
     grid-template-areas:
       "self-portrait swimmers august two-five-four the-last-time"
