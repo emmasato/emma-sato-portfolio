@@ -651,13 +651,13 @@ hr.footerwhite {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr fr;
   grid-template-rows: 1fr 1fr 1fr;
-  padding: 5em;
+  padding: 4em;
   grid-auto-flow: row;
   grid-template-areas:
     "self-portrait swimmers august two-five-four the-last-time"
     "blue-girl two-flowers blue-boy laying coco"
     "loft when-will-this-place . grand-city jericho";
-  gap: 1.2fr;
+  gap: 8rem;
 
 }
 
