@@ -284,13 +284,11 @@ hr.footerwhite {
 
 .two-flowers {
   grid-area: two-flowers;
-  max-height: 10em;
 }
 
 .august {
   grid-area: august;
   justify-content: center;
-  max-height: 10em;
 }
 
 .blue-girl {
@@ -307,23 +305,22 @@ hr.footerwhite {
 
 .jericho {
   grid-area: jericho;
-  max-height: 11em;
 }
 
 .laying {
   grid-area: laying;
-  max-height: 12em;
+
 }
 
 .loft {
   grid-area: loft;
-  max-height: 10em;
+ 
 }
 
 .self-portrait {
   grid-area: self-portrait;
   justify-content: center;
-  max-height: 10em;
+
 }
 
 .swimmers {
