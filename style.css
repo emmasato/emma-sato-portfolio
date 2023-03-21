@@ -118,6 +118,17 @@ a.phrase {
   text-decoration: underline;
 }
 
+a.phrase-about:link {
+  color: white;
+}
+
+a.phrase-about:hover{
+  color: black;
+}
+
+a.phrase-about:visited {
+  color: white;
+}
 
 a.contact-link:hover {
   color: black;
