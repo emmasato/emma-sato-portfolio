@@ -534,6 +534,13 @@ hr.footerwhite {
   margin-top: 5vh;
 }
 
+.clients {
+  display: flex;
+  flex-direction: column;
+  gap: .2em;
+
+}
+
 .profile-img {
   grid-area: profile-img;
   padding-bottom: 1rem;
