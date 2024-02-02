@@ -229,8 +229,8 @@ hr.footerwhite {
   grid-area: illustrations;
 }
 
-.boddi {
-  grid-area: boddi;
+.cala {
+  grid-area: cala;
 }
 
 .paintings {
@@ -656,7 +656,7 @@ hr.footerwhite {
   grid-auto-flow: row;
   grid-template-areas:
     ". . . . . illustrations illustrations illustrations illustrations"
-    "boddi boddi boddi . . illustrations illustrations illustrations illustrations"
+    "cala cala . . . illustrations illustrations illustrations illustrations"
     "capstone capstone capstone capstone capstone . . . ."
     "capstone capstone capstone capstone capstone . . . ."
     "capstone capstone capstone capstone capstone . . . ."
@@ -806,8 +806,8 @@ hr.footerwhite {
     grid-auto-flow: row;
     grid-template-areas:
       ". . .  illustrations illustrations . . . . . . . ."
-      "boddi boddi . illustrations illustrations . . . . . . paintings paintings"
-      "boddi boddi . . . . . . capstone capstone . paintings paintings"
+      "cala cala . illustrations illustrations . . . . . . paintings paintings"
+      "cala cala . . . . . . capstone capstone . paintings paintings"
       ". . . . . . tavolo-lungo tavolo-lungo capstone capstone . paintings paintings"
       ". . . . . . tavolo-lungo tavolo-lungo . . . . ."
       ". . . . . . . . . . . . ."
