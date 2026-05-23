@@ -1,5 +1,7 @@
 // view-builder.js
 
+
+
 // Build Visual View
 function buildVisualView() {
   const grid = document.querySelector('.project-grid');
@@ -34,6 +36,12 @@ function buildVisualView() {
   `;
 });
 
+}
+
+function projectLink(id) {
+  const project = projects.find(p => p.id === id);
+  if (!project || !project.slug) return `<span class="project-number">(<span class="project-number-label">${id}</span>)</span>`;
+  return `<a href="/projects/${project.slug}/" class="project-number">(<span class="project-number-label">${id}</span>)</a>`;
 }
 
 
@@ -72,7 +80,7 @@ function buildIndexView() {
       html += `
         <div id="${catAnchor}">
           <span class="category-label">${cat}:</span>
-          ${byCategory[cat].map(id => `<a href="#${id}" class="project-number">(<span class="project-number-label">${id}</span>)</a>`).join(', ')}
+          ${byCategory[cat].map(id => projectLink(id)).join(', ')}
         </div>
       `;
     });
@@ -99,7 +107,7 @@ function buildIndexView() {
       html += `
         <div id="year-${year}">
           <span class="category-label">${year}:</span>
-          ${byYear[year].map(id => `<a href="#${id}" class="project-number">(<span class="project-number-label">${id}</span>)</a>`).join(', ')}
+          ${byYear[year].map(id => projectLink(id)).join(', ')}
         </div>
       `;
     });
@@ -128,7 +136,7 @@ function buildIndexView() {
     sortedTags.forEach((tag, index) => {
       const tagAnchor = `tag-${tag.toLowerCase().replace(/\s+/g, '-')}`;
       html += `<span class="tag-group" id="${tagAnchor}">${tag}: `;
-      html += byTag[tag].map(id => `<a href="#${id}" class="project-number">(<span class="project-number-label">${id}</span>)</a>`).join(', ');
+      html += byTag[tag].map(id => projectLink(id)).join(', ');
       if (index < sortedTags.length - 1) {
         html += ' ';
       }
