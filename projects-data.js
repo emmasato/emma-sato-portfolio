@@ -207,7 +207,7 @@ const projects = [
     year: 2022,
     image: "/images/cala/cala-1-fashion-app-software-emma-sato-thumbnail.jpg",
     tags: null,
-    description: "CALA takes fashion production from ideation all the way to fulfillment on its all-in-one, collaborative platform. Our goal was to infuse CALA's complex features with simplicity, so that each step of the process felt intuitive to users.",
+    description: "CALA (now Mercer) takes fashion production from ideation all the way to fulfillment on its all-in-one, collaborative platform. Our goal was to infuse CALA's complex features with simplicity, so that each step of the process felt intuitive to users.",
     gallery: [
       {
         src: "/images/cala/cala-onboarding-desktop.jpg",
