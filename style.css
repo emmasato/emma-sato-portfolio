@@ -3,7 +3,6 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  /* height: 100%; */
 }
 
 *,
@@ -13,726 +12,230 @@ html {
 }
 
 
-/* Styling Variables */
+/* TYPOGRAPHY SYSTEM ---------------------------------------------------- */
 :root {
-  --accent-color: rgb(255, 75, 30);
-  --main-heading: 'liftedsans', sans-serif;
-  --body-typeface: 'open_sauce_oneregular', sans-serif;
-  --main-heading-serif: 'liftedserif';
+    --font-primary: 'Hershey-Noailles-Futura', sans-serif;
+    --font-alt: 'Hershey-Noailles-Futura-Bold', sans-serif;
+
+    --accent-color: rgb(255, 75, 30);
+
+    --text-lg: 1.56rem;
+    --text-base: 1rem;
+    --text-sm: 0.875rem;
+    --text-label: 0.6rem;
+
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-base: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
 }
 
-/* Global styles and mobile styles, styles for larger screesn are way down below */
+/* SPACING -------------------------------------------------------------- */
+* + * {
+    margin-top: var(--space-base);
+}
+
+h1 {
+    margin-top: var(--space-base);
+    margin-bottom: var(--space-xs);
+}
+
+
+.mt-0 { margin-top: 0; }
+.mt-sm { margin-top: var(--space-sm); }
+.mt-base { margin-top: var(--space-base); }
+.mt-lg { margin-top: var(--space-lg); }
+.mb-0 { margin-bottom: 0; }
+.mb-sm { margin-bottom: var(--space-sm); }
+.mb-lg { margin-bottom: var(--space-lg); }
+
+
+/* BODY + TYPE ---------------------------------------------------------- */
 body {
-  font-family: var(--body-typeface);
+    font-family: var(--font-primary);
+    font-size: var(--text-base);
+    line-height: 1;
+}
+
+.font-primary {
+    font-family: var(--font-primary);
+    letter-spacing: 10em;
+}
+
+.font-alt {
+    font-family: var(--font-alt);
+}
+
+.text-lg { font-size: var(--text-lg); }
+.text-base { font-size: var(--text-base); }
+.text-sm { font-size: var(--text-sm); }
+
+
+/* LINKS ---------------------------------------------------------------- */
+a {
   color: black;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background: white;
-  letter-spacing: .4px;
+  text-decoration: 1.4px dotted underline;
+  text-underline-offset: 2px;
+}
+
+a.no-underline {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #800080;
+  text-decoration-color: #800080;
 }
 
 
-/* Making all images responsive */
-
+/* IMAGES --------------------------------------------------------------- */
 img {
   max-height: 100%;
   max-width: 100%;
 }
 
-/*
-████████ ██    ██ ██████   ██████   ██████  ██████   █████  ██████  ██   ██ ██    ██ 
-   ██     ██  ██  ██   ██ ██    ██ ██       ██   ██ ██   ██ ██   ██ ██   ██  ██  ██  
-   ██      ████   ██████  ██    ██ ██   ███ ██████  ███████ ██████  ███████   ████   
-   ██       ██    ██      ██    ██ ██    ██ ██   ██ ██   ██ ██      ██   ██    ██    
-   ██       ██    ██       ██████   ██████  ██   ██ ██   ██ ██      ██   ██    ██ */
-   
 
-h1 {
-  font-size: 1.75em;
-  font-family: var(--main-heading);
-  line-height: 1.3em;
-}
-
-.bio-highlight {font-family: var(--main-heading-serif); line-height: 1.3;}
-.bio-highlight-small {font-family: var(--main-heading-serif); line-height: 1.3; font-size: .5em;}
-
-h2 {
-  font-size: 1.5em;
-  line-height: 1.3em;
-  font-family: var(--main-heading);
-}
-
-
-h3 {
-  font-size: .9em;
-  font-family: open_sauce_onebold;
-  margin-bottom: .7em;
-}
-
-h4 {
-  font-size: 0.75em;
-  font-family: open_sauce_onebold;
-}
-
-h5 {
-  font-size: .6em;
-  font-family: open_sauce_onebold;
-}
-
-p {
-  font-size: .7em;
-  font-family: var(--body-typeface);
-  line-height: 1.5em;
-  margin-bottom: 1.5em;
-  letter-spacing: .4px;
-}
-
-.emphasized {
-  font-style: italic;
-}
-
-/* 
-                                                                          
-,--.                                        ,--. ,--.          ,--.         
-|  ,---.  ,--. ,--.  ,---.   ,---.  ,--.--. |  | `--' ,--,--,  |  |,-.      
-|  .-.  |  \  '  /  | .-. | | .-. : |  .--' |  | ,--. |      \ |     /      
-|  | |  |   \   '   | '-' ' \   --. |  |    |  | |  | |  ||  | |  \  \      
-`--' `--' .-'  /    |  |-'   `----' `--'    `--' `--' `--''--' `--'`--'     
-          `---'     `--'                                                                                                  
-          ,--.             ,--.                 
- ,---.  ,-'  '-. ,--. ,--. |  |  ,---.   ,---.  
-(  .-'  '-.  .-'  \  '  /  |  | | .-. : (  .-'  
-.-'  `)   |  |     \   '   |  | \   --. .-'  `) 
-`----'    `--'   .-'  /    `--'  `----' `----'  
-                 `---'                                                                                                            
-*/
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-
-a.phrase {
-  text-decoration: underline;
-}
-
-a.phrase-about:link {
-  color: white;
-}
-
-a.phrase-about:hover{
-  color: black;
-}
-
-a.phrase-about:visited {
-  color: white;
-}
-
-a.contact-link:hover {
-  color: black;
-}
-
-a.about-nav-elements:hover {
-  color: black;
-}
-
-
-a.about {
-  color: white;
-  text-decoration: underline;
-  text-underline-offset: .1em;
-}
-
-a.about:hover {
-  color: black;
-}
-
-a.main-nav-about-button:hover {
-  color: --accent-color;
-}
-
-
-
-
-/* main nav rule styles */
-
-hr.navblack {
-  height: .1rem;
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-top: 0;
-  margin-bottom: 0;
-  position: sticky;
-  top: 5vh;
-  border: 0;
+/* NAVIGATION ----------------------------------------------------------- */
+.nav {
   display: block;
-  background: black;
-}
-
-hr.navwhite {
-  height: .1rem;
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-top: 0;
-  margin-bottom: 0;
-  position: sticky;
-  top: 5vh;
-  border: 0;
-  display: block;
-  background: white;
-}
-
-/* footer rule styles */
-
-hr.footerblack {
-  height: .1rem;
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-top: .5rem;
-  margin-bottom: 0;
-  border: 0;
-  display: block;
-  background: black;
-}
-
-hr.footerwhite {
-  height: .1rem;
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-top: 0;
-  margin-bottom: 0;
-  border: 0;
-  display: block;
-  background: white;
-}
-
-
-
-/* Work Page Layout */
-
-.portfolio {
-  padding: 1rem;
-}
-
-/* Defining the work page grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  grid-gap: 1rem;
-  /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width. Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
-}
-
-/* Define grid areas once */
-.illustrations {
-  grid-area: illustrations;
-}
-
-.cala {
-  grid-area: cala;
-}
-
-.paintings {
-  grid-area: paintings;
-}
-
-.capstone {
-  grid-area: capstone;
-
-}
-
-.tavolo-lungo {
-  grid-area: tavolo-lungo;
-
-}
-
-.nearby {
-  grid-area: nearby;
-}
-
-.when-will-this-place {
-  grid-area: when-will-this-place;
-  align-self: flex-end;
-}
-
-.world-kitchen {
-  grid-area: world-kitchen;
-  align-self: flex-end;
+  padding: var(--space-md);
 }
 
 .logo {
-  grid-area: logo;
-  width: 10em;
-  align-self: center;
+  width: 140px;
+  height: auto;
 }
 
-.about {
-  grid-area: about;
-}
-
-
-.copyright {
-  grid-area: copyright;
-  align-self: center;
-}
-
-.phrase {
-  grid-area: phrase;
-  justify-self: end;
-  align-self: center;
-}
-
-/* painting page grid areas */
-
-.grand-city {
-  grid-area: grand-city;
-}
-
-.two-five-four {
-  grid-area: two-five-four;
-}
-
-.two-flowers {
-  grid-area: two-flowers;
-}
-
-.august {
-  grid-area: august;
-  justify-content: center;
-}
-
-.blue-girl {
-  grid-area: blue-girl;
-}
-
-.blue-boy {
-  grid-area: blue-boy;
-}
-
-.coco {
-  grid-area: coco;
-}
-
-.jericho {
-  grid-area: jericho;
-}
-
-.laying {
-  grid-area: laying;
-
-}
-
-.loft {
-  grid-area: loft;
- 
-}
-
-.self-portrait {
-  grid-area: self-portrait;
-  justify-content: center;
-
-}
-
-.swimmers {
-  grid-area: swimmers;
-}
-
-.the-last-time {
-  grid-area: the-last-time;
-}
-
-/* Defining main nav once */
-
-.main-nav {
-  display: grid;
-  grid-template-columns: 1fr 15vw 15vw;
-  grid-template-rows: 5vh;
-  padding: 0px 15px 0px 15px;
-  column-gap: 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "logo catalogue about";
-  position: sticky;
-  top: 0;
-  height: 5vh;
-  background-color: white;
-}
-
-.main-nav-about {
-  display: grid;
-  grid-template-columns: 1fr 15vw 15vw;
-  grid-template-rows: 5vh;
-  padding: 0px 15px 0px 15px;
-  column-gap: 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "logo catalogue about";
-  position: sticky;
-  top: 0;
-  height: 5vh;
-  background-color: var(--accent-color);
-}
-
-.main-nav-paintings {
-  display: grid;
-  grid-template-columns: 1fr 15vw 15vw;
-  grid-template-rows: 5vh;
-  padding: 0px 15px 0px 15px;
-  column-gap: 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "logo catalogue about";
-  position: sticky;
-  top: 0;
-  height: 5vh;
-  background-color: black;
+.emma {
+  font-family: var(--font-label-light);
+  font-size: var(--text-lg);
+  letter-spacing: var(--space-xs);
 }
 
 
-
-/* Hero Styles */
-
-/*                                            
-,---.                   ,--.                   
-/  .-'  ,---.   ,---.  ,-'  '-.  ,---.  ,--.--. 
-|  `-, | .-. | | .-. | '-.  .-' | .-. : |  .--' 
-|  .-' ' '-' ' ' '-' '   |  |   \   --. |  |    
-`--'    `---'   `---'    `--'    `----' `--' */
-                                          
-
-.nav-about {
-  grid-area: about;
-  justify-self: end;
-  align-self: center;
-}
-
-.hero-headline {
-  font-size: 5em;
-}
-
-.footer {
-  display: grid;
-  grid-template-columns: 30vw 1fr;
-  grid-template-rows: 1fr;
-  padding: 0px 15px 0px 15px;
-  grid-auto-flow: row;
-  grid-template-areas: "copyright phrase";
-  height: 5vh;
-}
-
-.project-footer {
-  display: grid;
-  grid-template-columns: 30vw 1fr;
-  grid-template-rows: 1fr;
-  padding: 0px 15px 0px 15px;
-  grid-auto-flow: row;
-  grid-template-areas: "copyright phrase";
-  height: 5vh;
-}
-
-.footer-project-page {
-  color: white;
-
-}
-
-.footer-about-page {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  color: white;
-}
-
-
-/* Hero */
-
-.hero {
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  background-size: 600%;
-}
-
-
-/* 
-            _       _   _                                      
-  _ __   __ _(_)_ __ | |_(_)_ __   __ _   _ __   __ _  __ _  ___ 
- | '_ \ / _` | | '_ \| __| | '_ \ / _` | | '_ \ / _` |/ _` |/ _ \
- | |_) | (_| | | | | | |_| | | | | (_| | | |_) | (_| | (_| |  __/
- | .__/ \__,_|_|_| |_|\__|_|_| |_|\__, | | .__/ \__,_|\__, |\___|
- |_|                              |___/  |_|          |___/      
-
-*/
-
-.painting-page {
-  background-color: black;
-}
-
-.project-wrapper-painting {
-  display: flex;
-  flex-direction: column;  
-  justify-content: space-between;
-  background: black;
-  padding: 0em 1em 1em 1em;
-}
-
-
-
-
-
-/*                                            
-         ,--.                       ,--.   
- ,--,--. |  |-.   ,---.  ,--.,--. ,-'  '-. 
-' ,-.  | | .-. ' | .-. | |  ||  | '-.  .-' 
-\ '-'  | | `-' | ' '-' ' '  ''  '   |  |   
- `--`--'  `---'   `---'   `----'    `--'   */
-
-
-.about-page {
-  background-color: var(--accent-color);
-  /* max-height: 150vh; */
-}
-
-.about-nav-elements {
-  color: white;
-}
-
-.about-container {
-  min-height: 100%;
-  background: var(--accent-color);
-  color: white;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: max-content max-content max-content min-content;
-  padding: 0px 15px 0px 15px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "bio"
-    "contact"
-    "experience"
-    "profile-img";
-}
-
-.bio {
-  grid-area: bio;
-  padding-bottom: 2rem;
-  margin-top: 5vh;
-}
-
-.contact {
-  grid-area: contact;
-  align-self: end;
-  padding-bottom: 1rem;
-}
-
-.contact-link {
-  color: white;
-}
-
-.experience {
-  grid-area: experience;
-  margin-top: 5vh;
-}
-
-.clients {
-  display: flex;
-  flex-direction: column;
-  gap: .2em;
-
-}
-
-.profile-img {
-  grid-area: profile-img;
-  padding-bottom: 1rem;
-}
-
-
-.error-container {
-  display: flex;
-  justify-content: center;
-  height: 88vh;
-}
-
-/*                                               
-                          ,--.                  ,--.   
- ,---.  ,--.--.  ,---.    `--'  ,---.   ,---. ,-'  '-. 
-| .-. | |  .--' | .-. |   ,--. | .-. : | .--' '-.  .-' 
-| '-' ' |  |    ' '-' '   |  | \   --. \ `--.   |  |   
-|  |-'  `--'     `---'  .-'  /  `----'  `---'   `--'   
-`--'                    '---'                          
-*/
-
-.project-wrapper {
-  display: flex;
-  flex-direction: column;  
-  justify-content: space-between;
-  background: white;
-  padding: 0em 1em 1em 1em;
-}
-
-
-.project-image-container {
-  display: flex;
-  flex-direction: column;
-  padding: 0em 1em 1em 1em;
-}
-
-.project-aside {
-  margin-top: 5vh;
-  padding: 0em 2rem 1rem 0em;
-}
-
-.project-navigation {
+/* HOMEPAGE LAYOUT ------------------------------------------------------ */
+.main-container {
   display: flex;
   flex-direction: row;
-  position: sticky;
-  bottom: .75em;
-  justify-content: space-between;
+  height: 100vh;
+  gap: var(--space-md);
+  overflow: hidden;
 }
 
-.arrow {
-  width: 4.25rem;
-  padding-right: 1em;
-  padding-left: 1em;
-}
-
-.project-content {
-  flex-direction: column;
-}
-
-.project-content-column {
-  flex-direction: column;
-  max-width: 50%;
-}
-
-.project-section-heading {
-  margin-bottom: 1.2rem;
-}
-
-.project-description {
-  margin-bottom: 1.8rem;
-}
-
-.project-deets {
+.hero-container {
   display: flex;
-  flex-direction: row;
-  gap: 2em;
+  flex-direction: column;
+  flex: 3;
+  overflow-y: auto;
+  height: 100vh;
 }
 
-
-
-
-
-/* Error Page 404 */
-
-.error-container {
-  background: --accent-color;
-}
-
-/*                                                                         
-                ,--.    ,--.      ,---.                                 
- ,---.  ,--.--. `--'  ,-|  |     |  o ,-.                               
-| .-. | |  .--' ,--. ' .-. |     .'     /_                              
-' '-' ' |  |    |  | \ `-' |     |  o  .__)                             
-.`-  /  `--'    `--'  `---'       `---'                                 
-`---'                                                                   
-                                                                        
-                  ,--.            ,--.                                  
- ,---.  ,--,--. ,-'  '-.  ,--,--. |  |  ,---.   ,---.  ,--.,--.  ,---.  
-| .--' ' ,-.  | '-.  .-' ' ,-.  | |  | | .-. | | .-. | |  ||  | | .-. : 
-\ `--. \ '-'  |   |  |   \ '-'  | |  | ' '-' ' ' '-' ' '  ''  ' \   --. 
- `---'  `--`--'   `--'    `--`--' `--'  `---'  .`-  /   `----'   `----' 
-                                               `---'                     */
-
-
-
-.container {
-  display: grid;
-  grid-template-columns: 1.7fr 0.8fr 0.3fr 1.1fr 1.3fr 0.8fr 1.3fr 0.7fr 1fr;
-  grid-template-rows: 2rem repeat(10, minmax(1rem, auto));
-  padding-left: 15px;
-  padding-right: 15px;
-  /* gap: 1rem 1rem; */
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". . . . . illustrations illustrations illustrations illustrations"
-    "cala cala . . . illustrations illustrations illustrations illustrations"
-    "capstone capstone capstone capstone capstone . . . ."
-    "capstone capstone capstone capstone capstone . . . ."
-    "capstone capstone capstone capstone capstone . . . ."
-    ". . . . . . paintings paintings paintings"
-    "tavolo-lungo tavolo-lungo tavolo-lungo . . . paintings paintings paintings"
-    "tavolo-lungo tavolo-lungo tavolo-lungo . . . . . ."
-    ". . world-kitchen world-kitchen world-kitchen world-kitchen . . ."
-    ". . world-kitchen world-kitchen world-kitchen world-kitchen . . ."
-    ". . . . when-will-this-place when-will-this-place when-will-this-place when-will-this-place when-will-this-place"
-    "nearby nearby nearby nearby . . . . .";
-}
-
-
-.painting-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  padding: 2em;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "self-portrait swimmers"
-    "august two-five-four"
-    "the-last-time blue-girl"
-    "two-flowers blue-boy"
-    "laying coco"
-    "loft when-will-this-place"
-    "grand-city jericho";
-  gap: 3rem;
-}
-
-
-
-
-/* .container-box-corner {
-  height: .1rem;
-  border: 0;
+#visual-view {
   display: block;
-  background: black;
-} */
+  padding: 24px;
+}
 
-/* .container-gridlines {
-  border-bottom: 1.5px solid black;
-  border-right: 1.5px solid black;
-  border-left: 1.5px solid black;
-  border-top: 1.5px solid black;
-} */
+.about-panel {
+  width: 30%;
+  padding: 24px;
+  flex: 1;
+  overflow-y: auto;
+}
 
-/* Global and mobile styles for Project Page */
+.about-section {
+  margin-bottom: var(--space-xl);
+}
 
-.branding-navigation {
+.about-panel .project-header-bar {
+  margin-bottom: var(--space-xl);
+}
+
+/* THUMBNAILS / PROJECT GRID ------------------------------------------- */
+.project-grid {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
 
+.project-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+  max-width: 220px;
+  flex: 1 1 auto;
+  margin-bottom: var(--space-lg);
+}
+
+.project-item video {
+  width: 100%;
+  display: block;
+}
+
+.project-number {
+  font-family: var(--font-primary);
+  text-decoration: none;
+}
+
+.project-title {
+  font-family: var(--font-primary);
 }
 
 
+/* INDEX ---------------------------------------------------------------- */
+.index-section {
+  max-width: 100%;
+}
 
-/*
+.tag-group {
+  display: block;
+  margin-right: 0.5rem;
+}
 
-███    ███ ███████ ██████  ██  █████       ██████  ██    ██ ███████ ██████  ██ ███████ ███████ 
-████  ████ ██      ██   ██ ██ ██   ██     ██    ██ ██    ██ ██      ██   ██ ██ ██      ██      
-██ ████ ██ █████   ██   ██ ██ ███████     ██    ██ ██    ██ █████   ██████  ██ █████   ███████ 
-██  ██  ██ ██      ██   ██ ██ ██   ██     ██ ▄▄ ██ ██    ██ ██      ██   ██ ██ ██           ██ 
-██      ██ ███████ ██████  ██ ██   ██      ██████   ██████  ███████ ██   ██ ██ ███████ ███████ 
-                                              ▀▀                                               
+.project-number-label {
+  text-decoration: 1.4px dotted underline;
+  text-underline-offset: 2px;
+}
 
-/*
-                                                                                               
+.index-content h2 + div {
+  margin-top: var(--space-xs);
+}
+
+.index-content h2 {
+  margin-top: var(--space-lg);
+}
+
+.index-content h2:first-child {
+  margin-top: 0;
+}
 
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+/* LIST ----------------------------------------------------------------- */
+.list-item {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.list-number {
+  display: inline-block;
+  width: 40px;
+  font-weight: bold;
+}
+
+.list-title {
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.list-meta {
+  color: #666;
+  font-size: 14px;
+}
 
 
+/* TOOLTIP -------------------------------------------------------------- */
 #tooltip {
   position: absolute;
   font-family: var(--main-heading);
@@ -744,175 +247,417 @@ hr.footerwhite {
   max-width: 9rem;
   height: auto;
   display: flex;
-  align-items: left;
-}
-
-.painting-container {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-areas:
-    "self-portrait swimmers august two-five-four"
-    "the-last-time blue-girl two-flowers blue-boy"
-    "laying coco loft when-will-this-place"
-    "grand-city . jericho .";
-  gap: 6rem;
-  padding: 4em;
-}
-
+  align-items: flex-start;
 }
 
 
+/* INDEX TOGGLE SWITCH -------------------------------------------------- */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 20px;
+}
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
 
-  body {
-    background: white;
-  }
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border: 2px dotted black;
+}
 
-  h1 {
-    font-size: 2.5em;
-    line-height: 1.3;
-    letter-spacing: -.5px;
-  }
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 2px;
+  bottom: 2px;
+  background-color: black;
+  transition: .4s;
+}
 
-  h2 {
-    font-size: 1.75em;
-    line-height: 1.3em;
-    font-family: var(--main-heading);
-  }
-  
-  h5 {
-    font-size: 1em;
-  }
-  
-  p {
-    font-size: 1em;
-    line-height: 1.5em;
-    margin-bottom: 1.5em;
-    letter-spacing: .4px;
-  }
+input:checked + .slider {
+  background-color: white;
+}
+
+input:checked + .slider:before {
+  transform: translateX(12px);
+}
+
+.slider.round {
+  border-radius: 34px;
+  background-color: white;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
 
 
-  /* Tablet & Large Grid Layout */
-  .container {
+/* MOBILE NAV (homepage) ------------------------------------------------ */
+.mobile-nav {
+  display: none;
+}
+
+.mobile-nav .logo-link {
+  text-decoration: none;
+  color: inherit;
+  letter-spacing: 0.05em;
+}
+
+.mobile-nav .about-link {
+  text-decoration: none;
+  color: black;
+}
+
+.mobile-nav .about-link:hover {
+  text-decoration: 1.4px dotted underline;
+  text-underline-offset: 2px;
+}
+
+
+/* ABOUT PAGE ----------------------------------------------------------- */
+.about-page {
+  padding: 24px;
+  max-width: 420px;
+}
+
+.about-page .about-container {
+  margin-top: var(--space-xl);
+}
+
+
+/* PROJECT DETAIL PAGE -------------------------------------------------- */
+
+.project-header-bar {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-md);
+  margin-bottom: 4em;
+}
+
+.project-header-bar .logo-link {
+  text-decoration: none;
+  color: inherit;
+  letter-spacing: 0.05em;
+}
+
+.project-header-bar .back-link {
+  text-decoration: none;
+  color: black;
+}
+
+.project-header-bar .back-link:hover {
+  text-decoration: 1.4px dotted underline;
+  text-underline-offset: 2px;
+}
+
+.project-title-block h1 {
+  font-size: var(--text-lg);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+#project-description p {
+  text-indent: 2.5em;
+}
+
+#project-description p + p {
+  margin-top: var(--space-xs);
+}
+
+#image-caption-section > p:first-child {
+  margin-bottom: 0;
+  font-family: var(--font-alt);
+}
+
+#image-caption-section p + p {
+  margin-top: 0;
+}
+
+/* #image-caption p {
+  text-indent: 2.5em;
+} */
+
+#image-caption p + p {
+  margin-top: var(--space-xs);
+}
+
+.project-meta-block p {
+  margin-top: 0;
+}
+
+.project-meta-block a {
+  text-decoration: 1.4px dotted underline;
+  text-underline-offset: 2px;
+  color: black;
+}
+
+
+/* PROJECT GALLERY (desktop) ------------------------------------------- */
+.project-gallery {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.gallery-frame {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  max-width: 100%;
+}
+
+.gallery-viewport {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 0;
+}
+
+.gallery-viewport img,
+.gallery-viewport video {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 100px);
+  height: auto;
+  width: auto;
+}
+
+.gallery-hotzone {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: none;
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  color: black;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  overflow: hidden;
+}
+
+.gallery-hotzone-prev { left: 0; }
+.gallery-hotzone-next { right: 0; }
+
+.gallery-hotzone:hover {
+  opacity: 1;
+}
+
+.gallery-hotzone-arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translate(-100px, -100px);
+  white-space: nowrap;
+}
+
+/* Gallery thumbnails */
+.gallery-thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  align-self: flex-start;
+}
+
+.gallery-thumbs > * {
+  margin-top: 0;
+}
+
+.gallery-thumb {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 60px;
+  height: 40px;
+  overflow: hidden;
+  transition: opacity 0.15s ease;
+}
+
+.gallery-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-thumb:hover {
+  opacity: 0.8;
+}
+
+.gallery-thumb.active {
+  opacity: 1;
+  outline: 1.5px dotted black;  /* matches your dotted underline language */
+  outline-offset: 1px;
+}
+
+
+/* HIDE SCROLLBARS ----------------------------------------------------- */
+.about-panel,
+.hero-container {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.about-panel::-webkit-scrollbar,
+.hero-container::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* ============================================================
+   DESKTOP LAYOUT (project page)
+   ============================================================ */
+@media only screen and (min-width: 768px) {
+  .project-layout {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    /* grid-auto-columns: 1fr; */
-    padding-left: 15px;
-    padding-right: 15px;
-    gap: 1rem 1rem;
-    grid-auto-flow: row;
-    grid-template-areas:
-      ". . .  illustrations illustrations . . . . . . . ."
-      "cala cala . illustrations illustrations . . . . . . paintings paintings"
-      "cala cala . . . . . . capstone capstone . paintings paintings"
-      ". . . . . . tavolo-lungo tavolo-lungo capstone capstone . paintings paintings"
-      ". . . . . . tavolo-lungo tavolo-lungo . . . . ."
-      ". . . . . . . . . . . . ."
-      "nearby nearby . . . . . . . . world-kitchen world-kitchen ."
-      "nearby nearby . . when-will-this-place when-will-this-place . . . . world-kitchen world-kitchen ."
-      "nearby nearby . . when-will-this-place when-will-this-place . . . . world-kitchen world-kitchen ."
-      ". . . . when-will-this-place when-will-this-place . . . . world-kitchen world-kitchen .";
-    max-height: 89vh;
+    grid-template-columns: 1fr 3fr;
+    gap: var(--space-md);
+    height: 100vh;
     overflow: hidden;
-    overscroll-behavior: none;
+    /* No outer padding — children handle their own */
   }
 
-  .about-page {
+  .project-sidebar {
+    padding: 24px;
+    overflow-y: auto;
+    min-height: 0;
+    scrollbar-width: none;
+  }
+  .project-sidebar::-webkit-scrollbar { display: none; }
+
+  .gallery-image-area {
+    padding: 24px;
     overflow: hidden;
+    min-height: 0;
   }
 
-  .about-container {
-    grid-template-columns: minmax(550px, 800px) minmax(max-content, 1fr) minmax(100px, max-content);
-    width: 100vw;
-    grid-template-rows: 70vh 20vh;
-    padding: 0em 1em 0em 1em;
-    column-gap: 5rem;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "bio experience profile-img"
-      "contact . .";
+  .gallery-stack {
+    display: none;
   }
-
-  .profile-img {
-    margin-top: 5vh;
-    justify-self: end;
-  }
-
-
-  /* Project Page Styles on Large Screens */
-
-  .project-wrapper {
-    flex-direction: row;
-  }
-
-  .project-container-noscroll {
-    height: 84vh;
-  }
-
-  .project-content-noscroll {
-    min-height: 100%;
-  }
-
-  .project-aside {
-    width: 40vw;
-    height: 40vh;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 10vh;
-    padding: 0em 8rem 1rem 0em;
-  }
-  
-  .project-details {
-    width: 60vw;
-  }
-
-  .project-content {
-    margin-top: 5vh;
-    width: 50%;
-  }
-
-  .project-deets {
-    gap: 3em;
-  }
-
-
-  /* Painting Page Grid */
-  .painting-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 18vh 18vh 18vh;
-    grid-template-areas:
-      "self-portrait swimmers august two-five-four the-last-time"
-      "blue-girl two-flowers blue-boy laying coco"
-      "loft when-will-this-place . grand-city jericho";
-    gap: 8rem;
-  }
-
 }
 
+/* ============================================================
+   MOBILE LAYOUT (everything <768px)
+   ============================================================ */
+@media only screen and (max-width: 767px) {
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  body {
-    background: rgb(255, 255, 255);
-    /* height: 100%; */
-
+  /* HOMEPAGE ---------------------------------------------- */
+  .about-panel {
+    display: none;
   }
 
-  /* Extra Large Grid Layout */
-  
-  .about-page {
-    overflow: hidden;
+  .mobile-nav {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-md);
+    padding: 24px;
   }
 
-
-  .logo,
-  .about {
-    position: sticky;
+  .main-container {
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
   }
 
+  .hero-container {
+    flex: 1 1 auto;
+    height: auto;
+    overflow: visible;
+  }
 
+  /* 2-column grid, full width */
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
 
+  .project-item {
+    min-width: 0;
+    max-width: none;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .project-item img,
+  .project-item video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* PROJECT PAGE ----------------------------------------- */
+  .project-layout {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    gap: var(--space-lg);
+  }
+
+  .project-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .gallery-image-area,
+  #image-caption-section {
+    display: none;
+  }
+
+  /* Stacked gallery for mobile */
+  .gallery-stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .stack-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-base);
+    margin: 0;
+  }
+
+  .stack-item img,
+  .stack-item video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Hide the label (it's the only direct <p> child of .stack-caption) */
+  .stack-caption > p {
+    display: none;
+  }
+
+  /* Caption paragraphs (inside the div) */
+  .stack-caption div p {
+    margin-top: 0;
+  }
+
+  .stack-caption div p + p {
+    margin-top: var(--space-base);
+  }
 }

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project — Emma Sato</title>
+  <link rel="shortcut icon" type="image/jpg" href="logo/emma-sato-favicon.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="project-layout">
+
+    <!-- LEFT COLUMN: all sidebar content scrolls together -->
+    <div class="project-sidebar">
+
+      <div class="project-header-bar">
+        <a href="index.html" class="logo-link font-alt">EMMA SATO</a>
+        <a href="index.html" class="back-link">(Back to all projects)</a>
+      </div>
+
+      <div class="about-section project-title-block">
+        <h1 class="font-alt">
+          <span id="project-number"></span> <span id="project-title"></span>
+        </h1>
+      </div>
+
+      <div class="about-section" id="project-description-section">
+        <div id="project-description"></div>
+      </div>
+
+      <div class="about-section" id="image-caption-section">
+        <p>About image <span id="caption-image-label"></span></p>
+        <div id="image-caption"></div>
+      </div>
+
+      <div class="about-section project-meta-block">
+        <p id="meta-discipline"></p>
+        <p id="meta-year"></p>
+        <p id="meta-tags"></p>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN: interactive gallery (desktop) -->
+    <div class="gallery-image-area">
+      <div class="gallery-frame">
+        <div class="gallery-viewport">
+          <img id="gallery-image" alt="">
+          <video id="gallery-video" autoplay muted loop playsinline></video>
+          <button class="gallery-hotzone gallery-hotzone-prev" id="gallery-hotzone-prev" aria-label="Previous image">
+            <span class="gallery-hotzone-arrow">(prev)</span>
+          </button>
+          <button class="gallery-hotzone gallery-hotzone-next" id="gallery-hotzone-next" aria-label="Next image">
+            <span class="gallery-hotzone-arrow">(next)</span>
+          </button>
+        </div>
+        <div class="gallery-thumbs" id="gallery-thumbs"></div>
+      </div>
+    </div>
+
+    <!-- Stacked gallery for mobile -->
+    <div class="gallery-stack" id="gallery-stack"></div>
+
+  </div>
+
+  <script src="projects-data.js"></script>
+  <script src="project-builder.js"></script>
+
+
+</body>
+
+</html>
