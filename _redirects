@@ -1,1 +1,12 @@
-/projects/*  /project.html  200
+# Project page redirects (old .html → new slug URLs)
+/tavolo-lungo.html          /projects/tavolo-lungo/       301
+/world-kitchen.html         /projects/world-kitchen/      301
+/harbour.html               /projects/harbour/            301
+/cala.html                  /projects/cala/               301
+/nearby.html                /projects/silver-weaving/     301
+/boddi-advertising-series.html  /                         301
+/paintings.html             /projects/paintings-2021/     301
+/miscellaneous.html         /                             301
+
+# Keep the projects/* rewrite last
+/projects/*                 /project.html                 200
