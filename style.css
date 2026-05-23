@@ -76,7 +76,9 @@ body {
 /* LINKS ---------------------------------------------------------------- */
 a {
   color: black;
-  text-decoration: 1.4px dotted underline;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1.4px;
   text-underline-offset: 2px;
 }
 
@@ -195,7 +197,9 @@ img {
 }
 
 .project-number-label {
-  text-decoration: 1.4px dotted underline;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1.4px;
   text-underline-offset: 2px;
 }
 
@@ -323,7 +327,9 @@ input:checked + .slider:before {
 }
 
 .mobile-nav .about-link:hover {
-  text-decoration: 1.4px dotted underline;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1.4px;
   text-underline-offset: 2px;
 }
 
@@ -360,7 +366,9 @@ input:checked + .slider:before {
 }
 
 .project-header-bar .back-link:hover {
-  text-decoration: 1.4px dotted underline;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1.4px;
   text-underline-offset: 2px;
 }
 
@@ -400,7 +408,9 @@ input:checked + .slider:before {
 }
 
 .project-meta-block a {
-  text-decoration: 1.4px dotted underline;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1.4px;
   text-underline-offset: 2px;
   color: black;
 }
