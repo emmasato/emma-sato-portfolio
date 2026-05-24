@@ -138,7 +138,7 @@ const projects = [
       },
       {
         src: "/images/oil-paintings/spreads/painting-2.jpg",
-        caption: "Left<br>Grand City Auto Centre, the Old Sign<br>Oil on wood panel<b>8 x 6 inches<br><br>Right<br>Hector's<br>Oil on wood panel<br>6 x 6 inches"
+        caption: "Left<br>Grand City Auto Centre, the Old Sign<br>Oil on wood panel<br>8 x 6 inches<br><br>Right<br>Hector's<br>Oil on wood panel<br>6 x 6 inches"
       },
       {
         src: "/images/oil-paintings/spreads/painting-3.jpg",
@@ -445,7 +445,7 @@ const projects = [
     year: 2025,
     image: "/images/vermin/vermin.jpg",
     tags: ["Scanner", "Logo", "Typography", "Ongoing"],
-    description: "Vermin was born out of the idea that you don't have to be a pro climber to be a part of climbing culture. This is a magazine by real climbers, for real climbers. \"Real\" not because of a grade we climb, but because of what we love: raw fingers from late nights at the gym, alpine starts, taped flappers, obsessing over beta, scraped elbows, texting about the latest FA video. No matter how good you are, there's always a project. Why should the pros have all the fun?\n\nAs cofounder, I created & conceptualized this publication and was responsible for all art direction and design. As part of the project, I created the custom, rock-inspired typeface used in the logo and spreads.",
+    description: "Rock climbing has a unique closeness and intensity to its culture, shaped by decades of daring acts, non-traditional lifestyles, and dedication to effort for its own sake. Vermin is a celebration of everyday climbers and the love for the sport that keeps us all getting back up on rock.\n\nAs cofounder, I created & conceptualized this publication and was responsible for all art direction and design. As part of the design process, I created the custom, rock-inspired typeface used in the logo and spreads.",
     gallery: [
       {
         src: "/images/vermin/vermin.jpg",
